@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+<body>
+    <header> Serenova Music School    
+        <nav class="navbar"> Menu <!-- Sidebar area  -->
+        
+            <a href="#" id = "Home"> Home</a>
+            <a href="#" class="course">Courses</a>
+            <a href="#">Teachers</a>
+            <a href="#">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="heading1">
+            Courses
+        </h1>
+        <div class="line">
+            Find the right course for you
+        </div>
+
+        <section>
+            <form>
+                <label for="search">Search </label>
+                <input type="text" placeholder="Search by course name">
+
+                <select name="level" id="select-level">
+                    <option value="Level">Level</option>
+                    <option value="All">All</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+
+                <select name="Instrument" id="select-instrument">
+                    <option value="Instrument">Instrument</option>
+                    <option value="guitar">Guitar</option>
+                    <option value="piano">Piano</option>
+                    <option value="violin">Violin</option>
+                    <option value="drums">Drums</option>
+                    <option value="vocals">Vocals</option>
+                </select>
+
+                <button type="button">Search</button>
+
+            </form>
+        </section>
+
+        <table border="1">
+            <thead style="width:fit-content;">
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Course
+                    </th>
+                    <th>
+                        Instrument
+                    </th>
+                    <th>
+                        Level
+                    </th>
+                    <th>
+                        Teacher
+                    </th>
+                    <th>
+                        Fee
+                    </th>
+                    <th>
+                        Seats
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        Guitar Basics
+                    </td>
+                    <td>
+                        Guitar
+                    </td>
+                    <td>
+                        Beginner
+                    </td>
+                    <td>
+                        Aman Verma
+                    </td>
+                    <td>
+                        Rs. 2500
+                    </td>
+                    <td>
+                        10
+                    </td>
+                    <td>
+                        <button type="button" class="edit-btn">Edit</button>
+                        <button type="button" class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        Piano Foundations
+                    </td>
+                    <td>
+                        Piano
+                    </td>
+                    <td>
+                        Beginner
+                    </td>
+                    <td>
+                        Neha Kapoor
+                    </td>
+                    <td>
+                        Rs. 3000
+                    </td>
+                    <td>
+                        8
+                    </td>
+                    <td>
+                        <button type="button" class="edit-btn">Edit</button>
+                        <button type="button" class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        Violin Melodies
+                    </td>
+                    <td>
+                        Violin
+                    </td>
+                    <td>
+                        Intermediate
+                    </td>
+                    <td>
+                        Riya Sen
+                    </td>
+                    <td>
+                        Rs. 3500
+                    </td>
+                    <td>
+                        6
+                    </td>
+                    <td>
+                        <button type="button" class="edit-btn">Edit</button>
+                        <button type="button" class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        Drum Rhythms
+                    </td>
+                    <td>
+                        Drums
+                    </td>
+                    <td>
+                        Beginner
+                    </td>
+                    <td>
+                        Karan Mehta
+                    </td>
+                    <td>
+                        Rs. 2800
+                    </td>
+                    <td>
+                        8
+                    </td>
+                    <td>
+                        <button type="button" class="edit-btn">Edit</button>
+                        <button type="button" class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        5
+                    </td>
+                    <td>
+                        Vocal Training
+                    </td>
+                    <td>
+                        Vocals
+                    </td>
+                    <td>
+                        Intermediate
+                    </td>
+                    <td>
+                        Simran Kaur
+                    </td>
+                    <td>
+                        Rs. 3200
+                    </td>
+                    <td>
+                        12
+                    </td>
+                    <td>
+                        <button type="button" class="edit-btn">Edit</button>
+                        <button type="button" class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="heading2">
+            Add a new course
+        </h2>
+        <section>
+            <form>
+                <div>
+                <label for="course-name">Course name </label>
+                <input type="text">
+                </div>
+
+                <div>
+                <label for="Instrument">Instrument </label>
+                <input type="text">
+                </div>
+
+                <div>
+                <label for="Level">Level </label>
+                <input type="text">
+                </div>
+
+                <div>
+                <label for="Teacher">Teacher </label>
+                <input type="text">
+                </div>
+
+                <div>
+                <label for="Fee">Fee </label>
+                <input type="text">
+                </div>
+
+                <div>
+                <label for="Seats">Seats </label>
+                <input type="text">
+                </div>
+            </form>
+            <button>Add</button>
+
+            <!-- Later for Java -->
+            <p></p>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+
+            <h3>SERENOVA</h3>
+        
+         <div class="c1">
+
+            <h4>EXPLORE</h4>
+            
+            <a href="#"> Courses</a>
+            <a href="#"> About Us</a>
+            <a href="#"> Contact</a>
+
+         </div>
+
+         <div>
+
+            <h4 class="c2">STUDENTS</h4>
+
+            <a href="#">Login</a>
+            <a href="#">Bookings</a>
+            <a href="#">My courses</a>
+
+         </div>
+        
+         <div class="c1">
+
+            <h4>TEACHERS</h4>
+
+            <a href="#"> Dashboard</a>
+            <a href="#"> Class Schedule</a>
+
+         </div>
+
+         <div class="c2">
+
+            <h4>ADMIN</h4>
+
+            <a href="#">Dashboard</a>
+            <a href="#">Reports</a>
+         </div>
+        
+        </section> 
+
+        <div class="footer-bottom">
+
+            <p>  
+                &copy; 2026 Serenova Music School
+                Academic Project - CSE326
+            </p> 
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
