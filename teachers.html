@@ -178,43 +178,68 @@
                 </tr>
         </table>
 
-        <h2>
-            Add a new teacher
-        </h2>
-        <section>
-            <form>
-                <div>
-                <label for="teacher-name">Teacher name </label>
-                <input type="text">
-                </div>
-
-                <div>
-                <label for="Instrument">Instrument </label>
-                <input type="text">
-                </div>
-
-                <div>
-                <label for="Experience">Experience </label>
-                <input type="text">
-                </div>
-
-                <div>
-                <label for="Phone">Phone </label>
-                <input type="text">
-                </div>
-
-                <div>
-                <label for="Status">Status </label>
-                <input type="text">
-                </div>
-            </form>
-            <button>Add</button>
-
             <!-- Later for Java -->
             <p></p>
+
+            <!-- ADD TEACHER FORM -->
+        <section class="add-teacher-section">
+
+            <h2>Add a New Teacher</h2>
+
+            <form class="add-teacher-form">
+
+                <div class="teacher-form-group">
+                    <label for="teacherName">Teacher Name</label>
+                    <input type="text" id="teacherName"
+                        placeholder="Enter teacher name" required>
+                </div>
+
+                <div class="teacher-form-group">
+                    <label for="teacherInstrument">Instrument</label>
+                    <select id="teacherInstrument">
+                        <option>Guitar</option>
+                        <option>Piano</option>
+                        <option>Violin</option>
+                        <option>Drums</option>
+                        <option>Vocals</option>
+                        <option>Keyboard</option>
+                    </select>
+                </div>
+
+                <div class="teacher-form-group">
+                    <label for="teacherExp">Experience (Years)</label>
+                    <input type="number" id="teacherExp"
+                        min="0" placeholder="Enter experience">
+                </div>
+
+                <div class="teacher-form-group">
+                    <label for="teacherPhone">Phone</label>
+                    <input type="tel" id="teacherPhone"
+                        placeholder="10 digit phone number"
+                        pattern="[0-9]{10}">
+                </div>
+
+                <div class="teacher-form-group">
+                    <label for="teacherStatus">Status</label>
+                    <select id="teacherStatus">
+                        <option>Active</option>
+                        <option>Inactive</option>
+                    </select>
+                </div>
+
+                <div class="teacher-add-button">
+                    <button type="button" id="addTeacherBtn">Add</button>
+                </div>
+
+            </form>
+
+            <p id="teacherMessage"></p>
+
         </section>
+
     </main>
-   <footer>
+
+    <footer>
         <section>
 
             <h3>SERENOVA</h3>
