@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!-- Navigation Area! -->
@@ -20,92 +20,210 @@
         </nav>
     </header>
 
+<main>    
 <!-- Welcome part - (w image/video) -->
     <section>
 
         <h1> 
             <marquee behavior="slide" direction = "left" scrollamount="200"> "Serenova Music School"</marquee> 
         </h1>
+        <img src="" alt="Serenova Music School">
         <small>Where every note meets its soul.</small>
 
-        <button>Login</button>
+        <a href="login.html">
+            <button>Login</button>
+        </a>
 
-        <button> Get started </button>
+        <a href="#">
+            <button>Get started</button>
+        </a>
 
-        <p> Discover your purpose and create your path to change the world. [need content] </p>        
+        <p> From your first chord to your first stage, learn with friendly expert teachers in small, welcoming classes.</p>        
     </section>
 
 <!-- Exploring [Instruments] -->
 
-    <section id="Course">
+    <section id="Course" value="courses">
 
         <!-- 2. Search for interest -->
-            <h2>Explore Your Instruments</h2>
+            <h2>Explore Your Courses</h2>
 
-            <article> Guitar </article>
-            <article> Piano </article>
-            <article> Violin </article>
-            <article> Drums </article>
-            <article> Vocals </article>
+            <article>
+                <h3>Guitar Basics</h3>
+
+                <img src="" alt="Guitar">
+
+                <div>Learn chords, strumming patterns and techniques to bring your favourite melodies to life.</div>
+
+            </article>
+
+            <article>
+                <h3>Piano Foundations</h3>
+
+                <img src="" alt="Piano">
+
+                <div>Build a strong musical foundation through keyboard techniques, melodies and music theory.</div>
+            </article>
+
+            <article> 
+                <h3>Violin Melodies</h3>
+
+                <img src="" alt="Violin">
+
+                <div></div>
+
+            </article>
+
+            <article> 
+                <h3>Drums Rhythms</h3>
+
+                <img src="" alt="Drums">
+
+                <div>Develop your sense of rhythm, timing and coordination through practical sessions.</div>
+                
+            </article>
+
+            <article> 
+                <h3>Vocal Training</h3>
+
+                <img src="" alt="Vocal">
+
+                <div>Explore your voice, improve pitch and build confidence through guided singing lessons.</div>
+            </article>
 
             <!-- Courses -->
 
                 <input type="search" placeholder="What are you into?!" id="search">
 
-                <button> Browse all programs </a>                    
+                <a href="#">
+                    <button>Browse all programs</button>
+                </a>                    
     </section>
 
     <section > 
-        <h2>About Us</h2>
+        <h2>About Serenova</h2>
 
+        <div>
+
+            Serenova Music School, a place where creativity, passion and music come together.
+
+            We believe that music is more than just learning an instrument; it is a way of expressing yourself.
+
+            Our academy provides a supportive learning environment for beginners as well as aspiring musicians.
+
+            <img src="" alt="Serenova Music School">
+
+        </div>
 
     </section>
 
     <section id="Roles">
-        <h2>Who is it for?</h2>
 
-        <article class="Students">
-            Students
+        <h2> Our User Roles </h2>
 
-        </article>
-
-        <article id="Teachers">
-            Teachers
-
-        </article>
+            <div> Sere provides a role-based management system designed to make music education organised and accessible. </div>
 
         <article id="Admin">
-            Admin
+            
+            <h3 id="Manage">Administrator</h3>
+
+                <div>Responsible for managing the academy, including students, teachers, courses, schedules and overall operations.</div>
 
         </article>
+
+        <article id="Class">
+
+            <h3> Teachers </h3>
+
+                <div> See your Students, approve or reject class requests, and mark classes completed.</div>
+        </article>
+
+        <article class="Enroll">
+
+            <h3>Students</h3>
+            
+          <div> Can explore courses, enroll in classes, view schedules and access personal learning information. </div>  
+
+        </article>
+
+        <div class="describe_role"> Each user receives access to features according to their assigned role, ensuring an organised and efficient experience. </div>
+
     </section>
 
     <section>
         <h2>Contact</h2>
 
+        <p>Have questions about our courses, schedules or enrollment process? We'd love to hear from you.</p>
+
+        <h4>Email: </h4>
+        <a href=""> school@serenova.com </a>
+
+        <h4>Phone Number: </h4> <p>+91 XXXXX XXXXX</p>
+
+        Phone number: +91 xxxxx xxxxx
+
+        <small>We're always happy to help you begin your musical journey!</small>
+
     </section>
 
+</main>
 
 <hr>
+
     <footer>
         <section>
-            <!-- Schl Name -->
+
+            <h3>SERENOVA</h3>
         
-         <div>
-            <a href="#"> Current Students</a>|
-            <a href="#"> Faculty & Staff</a>|
+         <div class="c1">
+
+            <h4>EXPLORE</h4>
+            
             <a href="#"> Courses</a>
+            <a href="#"> About Us</a>
+            <a href="#"> Contact</a>
+
+         </div>
+
+         <div>
+
+            <h4 class="c2">STUDENTS</h4>
+
+            <a href="#">Login</a>
+            <a href="#">Bookings</a>
+            <a href="#">My courses</a>
+
          </div>
         
-         <div>
-            <a href="#"> Dashboard</a>|
-            <a href="#"> Bookings</a>|
-            <a href="#"> Reports</a>|
+         <div class="c1">
+
+            <h4>TEACHERS</h4>
+
+            <a href="#"> Dashboard</a>
+            <a href="#"> Class Schedule</a>
+
+         </div>
+
+         <div class="c2">
+
+            <h4>ADMIN</h4>
+
+            <a href="#">Dashboard</a>
+            <a href="#">Reports</a>
          </div>
         
         </section> 
 
-        <div id = "last"> &copy; Project for CSE 326. All the images , videos belong to respective people. </div>
+        <div class="footer-bottom">
+
+            <p>  
+                &copy; 2026 Serenova Music School
+                Academic Project - CSE326
+            </p> 
+
+        </div>
+
     </footer>
+
 </body>
 </html>
