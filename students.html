@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+</head>
+<body>
+    <header> Serenova Music School    
+        <nav class="navbar"> Menu <!-- Sidebar area  -->
+        
+            <a href="#" id = "Home"> Home</a>
+            <a href="#" class="course">Courses</a>
+            <a href="#">Teachers</a>
+            <a href="#">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main class="students-container">
+
+        <!-- HEADING AND TOTAL COUNT -->
+        <section class="students-heading">
+
+            <div>
+                <h1>Students</h1>
+                <p>Manage all registered students.</p>
+            </div>
+
+            <div class="student-count" id="studentCount">
+                Total Students: 8
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH AND FILTER -->
+        <section class="students-search">
+
+            <form class="students-search-form">
+
+                <input type="search"
+                    id="studentSearch"
+                    placeholder="Search by name or email">
+
+                <select id="courseFilter">
+                    <option value="all courses">All Courses</option>
+                    <option>Guitar</option>
+                    <option>Piano</option>
+                    <option>Violin</option>
+                    <option>Drums</option>
+                    <option>Vocals</option>
+                    <option>Keyboard</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="">All Status</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                </select>
+
+                <button type="button" id="searchBtn">Search</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- STUDENTS TABLE -->
+        <section class="students-table-section">
+
+            <div class="students-table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentBody">
+
+                        <tr>
+                            <td>1</td>
+                            <td>Aarav Singh</td>
+                            <td>aarav@example.com</td>
+                            <td>Guitar</td>
+                            <td><span class="student-active">Active</span></td>
+                            <td>
+                                <button type="button" class="student-edit">Edit</button>
+                                <button type="button" class="student-delete">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Diya Sharma</td>
+                            <td>diya@example.com</td>
+                            <td>Piano</td>
+                            <td><span class="student-active">Active</td>
+                            <td>
+                                <button type="button" class="student-edit">Edit</button>
+                                <button type="button" class="student-delete">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Kabir Malhotra</td>
+                            <td>kabir@example.com</td>
+                            <td>Drums</td>
+                            <td><span class="student-active">Active</td>
+                            <td>
+                                <button type="button" class="student-edit">Edit</button>
+                                <button type="button" class="student-delete">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Isha Gupta</td>
+                            <td>isha@example.com</td>
+                            <td>Violin</td>
+                            <td><span class="student-inactive">Inactive</span></td>
+                            <td>
+                                <button type="button" class="student-edit">Edit</button>
+                                <button type="button" class="student-delete">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Rohan Das</td>
+                            <td>rohan@example.com</td>
+                            <td>Vocals</td>
+                            <td><span class="student-active">Active</span></td>
+                            <td>
+                                <button type="button" class="student-edit">Edit</button>
+                                <button type="button" class="student-delete">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>Meera Nair</td>
+                            <td>meera@example.com</td>
+                            <td>Piano</td>
+                            <td><span class="student-active">Active</span></td>
+                            <td>
+                                <button type="button" class="student-edit">Edit</button>
+                                <button type="button" class="student-delete">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>7</td>
+                            <td>Tanvi Joshi</td>
+                            <td>tanvi@example.com</td>
+                            <td>Keyboard</td>
+                            <td><span class="student-active">Active</span></td>
+                            <td>
+                                <button type="button" class="student-edit">Edit</button>
+                                <button type="button" class="student-delete">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>8</td>
+                            <td>Arjun Rao</td>
+                            <td>arjun@example.com</td>
+                            <td>Guitar</td>
+                            <td><span class="student-inactive">Inactive</span></td>
+                            <td>
+                                <button type="button" class="student-edit">Edit</button>
+                                <button type="button" class="student-delete">Delete</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ADD STUDENT FORM -->
+        <section class="add-student-section">
+
+            <h2>Add a New Student</h2>
+
+            <form class="add-student-form">
+
+                <div class="student-form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required>
+                </div>
+
+
+                <div class="student-form-group">
+                    <label for="studentEmail">Email</label>
+                    <input type="email"
+                        id="studentEmail"
+                        placeholder="name@example.com"
+                        required>
+                </div>
+
+
+                <div class="student-form-group">
+                    <label for="studentCourse">Course</label>
+                    <select id="studentCourse">
+                        <option>Guitar</option>
+                        <option>Piano</option>
+                        <option>Violin</option>
+                        <option>Drums</option>
+                        <option>Vocals</option>
+                        <option>Keyboard</option>
+                    </select>
+                </div>
+
+
+                <div class="student-form-group">
+                    <label for="studentStatus">Status</label>
+                    <select id="studentStatus">
+                        <option>Active</option>
+                        <option>Inactive</option>
+                    </select>
+                </div>
+
+
+                <div class="student-add-button">
+                    <button type="button" id="addStudentBtn">Add</button>
+                </div>
+
+            </form>
+
+            <p id="studentMessage"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <section>
+
+            <h3>SERENOVA</h3>
+        
+         <div class="c1">
+
+            <h4>EXPLORE</h4>
+            
+            <a href="#"> Courses</a>
+            <a href="#"> About Us</a>
+            <a href="#"> Contact</a>
+
+         </div>
+
+         <div>
+
+            <h4 class="c2">STUDENTS</h4>
+
+            <a href="#">Login</a>
+            <a href="#">Bookings</a>
+            <a href="#">My courses</a>
+
+         </div>
+        
+         <div class="c1">
+
+            <h4>TEACHERS</h4>
+
+            <a href="#"> Dashboard</a>
+            <a href="#"> Class Schedule</a>
+
+         </div>
+
+         <div class="c2">
+
+            <h4>ADMIN</h4>
+
+            <a href="#">Dashboard</a>
+            <a href="#">Reports</a>
+         </div>
+        
+        </section> 
+
+        <div class="footer-bottom">
+
+            <p>  
+                &copy; 2026 Serenova Music School
+                Academic Project - CSE326
+            </p> 
+
+        </div>
+
+    </footer>
+
+  
+</body>
+</html>
