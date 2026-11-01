@@ -3,57 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login | Serenova Music School</title>
+
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-    <h1>SERENOVA</h1>
 
-    <h3>Welcome to your musical journey</h3>
+    <header> <img src="svgs/logo-light.svg" alt="Serenova Music School logo">
 
-    <form >
-        <!-- Form details -->
+        <nav>  
 
-        <div>
+            <a href="index.html" id = "Home"> Home</a>
+
+            <a href="courses.html" class="course">Courses</a>
+
+            <a href="teachers.html">Teachers</a>
+
+            <a href="students.html">Students</a>
+
+            <a href="#">Bookings</a>
+
+            <a href="#">Dashboard</a>
+
+            <a href="login.html">Login</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="form-box">
+
+            <h1>Welcome Back</h1>
+
+            <p>Welcome to your musical journey</p>
+
+            <form action="#" method="post">
+
+                <div>
+
+                    <label for="email">Email Address:</label>
+
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                </div>
+
+                <div>
+
+                    <label for="password">Password:</label>
+
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                </div>
+
+                <div>
+                    <label for="role">Login as:</label>
+
+                    <select id="role" name="role" required>
+
+                        <option>Select your role</option>
+
+                        <option value="student">Student</option>
+
+                        <option value="teacher">Teacher</option>
+
+                        <option value="admin">Administrator</option>
+                        
+                    </select>
+
+                </div>
+
+                <div class="remember">
+
+                    <input type="checkbox" id="remember" name="remember">
+
+                    <label for="remember">Remember me</label>
+
+                    <a href="#">Forgot password?</a>
+
+                </div>
+
+                <p>
+                    <button type="submit">Log in</button>
+                </p>
+
+            </form>
+
+            <p>Not registered yet? 
+                <a href="register.html">Create an account</a>
+            </p>
+
+            <div class="social">
+
+                <p>Or continue with:</p>
+
+                <button type="button">
+
+                    <img src="svgs/google.svg" alt=""> Sign in with Google
+
+                </button>
+
+                <button type="button">
+
+                    <img src="svgs/apple.svg" alt=""> Sign in with Apple
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <section class="upfooter">
+
             <div>
-                Email Address:
-                <input type="email" placeholder="Enter your email" required>
+
+                <img src="svgs/logo-light.svg" alt="Serenova logo">
+
             </div>
 
             <div>
-                Password
-                <input type="password" placeholder="Enter your password" required>
+
+                <h3>EXPLORE</h3>
+
+                <a href="courses.html">Courses</a>
+
+                <a href="index.html#contact">Contact</a>
+
             </div>
 
             <div>
-                Login as
-                <input type="submit" id="select_role" required placeholder="Select your role">
+
+                <h3>STUDENTS</h3>
+
+                <a href="login.html">Login</a>
+
+                <a href="#">Bookings</a>
+
+                <a href="courses.html">My courses</a>
+
             </div>
 
-        </div>
+            <div>
 
-    <input type="checkbox" id="pass">
+                <h3>TEACHERS</h3>
 
-    <label for="pass">Remember me</label>
-    <a href="#">Forget password?</a>
+                <a href="#">Dashboard</a>
 
+                <a href="#">Class Schedule</a>
 
-    <button type="submit">Log in</button>
+            </div>
 
-    <p>
-        Not registered yet?
+            <div>
 
-<!-- Add registration link here -->
-        <a href="#"> Create an account </a>
-    </p>
-    </form>
+                <h3>ADMIN</h3>
 
-    
-<!-- Add images. -->
-    <button type="button">Sign in with Google </button>
-    <button type="button">Sign in with Apple </button>
+                <a href="#">Dashboard</a>
 
-  
+                <a href="#">Reports</a>
+
+            </div>
+
+        </section>
+
+        <section class="lower_footer">
+
+            <p>&copy; 2026 Serenova Music School | Academic Project - CSE326</p>
+
+        </section>
+
+    </footer>
+
 </body>
+
 </html>
