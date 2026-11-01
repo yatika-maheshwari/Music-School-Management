@@ -3,225 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Serenova Music School</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
 </head>
+
 <body>
 <!-- Navigation Area! -->
 
-    <header> Serenova Music School    
-        <nav> Menu <!-- Sidebar area  -->
-        
-            <a href="#" id = "Home"> Home</a>
-            <a href="#" class="course">Courses</a>
-            <a href="#">Teachers</a>
-            <a href="#">Contact</a>
+    <header> 
+        <img src="svgs/logo-light.svg" alt="Serenova Music School logo"> 
+
+        <nav>  
+
+            <a href="index.html" id = "Home"> Home</a>
+
+            <a href="courses.html" class="course">Courses</a>
+
+            <a href="teachers.html">Teachers</a>
+            
+            <a href="students.html">Students</a>
+
+            <a href="#">Bookings</a>
+
+            <a href="#">Dashboard</a>
+            
             <a href="login.html">Login</a>
+
         </nav>
+
     </header>
 
 <main>    
-<!-- Welcome part - (w image/video) -->
-    <section>
 
-        <h1> 
-            <marquee behavior="slide" direction = "left" scrollamount="200"> "Serenova Music School"</marquee> 
-        </h1>
-        <img src="" alt="Serenova Music School">
-        <small>Where every note meets its soul.</small>
+<!-- Welcome section -->
 
-        <a href="login.html">
-            <button>Login</button>
-        </a>
+        <section class="hero">
 
-        <a href="#">
-            <button>Get started</button>
-        </a>
+            <h1>Serenova Music School</h1>
 
-        <p> From your first chord to your first stage, learn with friendly expert teachers in small, welcoming classes.</p>        
-    </section>
+            <!-- Replace hero.svg with your own image -->
 
-<!-- Exploring [Instruments] -->
+            <p>
+                <small>Where every note meets its soul.</small>
+            </p>
 
-    <section id="Course" value="courses">
+            <p>From your first chord to your first stage, learn with friendly expert teachers in small, welcoming classes.</p>
 
-        <!-- 2. Search for interest -->
+            <a href="login.html" class="btn">Login</a>
+
+            <a href="register.html" class="btn">Get started</a>
+
+        </section>
+
+        <!-- Courses -->
+
+        <section id="courses">
+
             <h2>Explore Your Courses</h2>
 
-            <article>
-                <h3>Guitar Basics</h3>
+            <div class="cards">
 
-                <img src="" alt="Guitar">
+                <article class="card">
 
-                <div>Learn chords, strumming patterns and techniques to bring your favourite melodies to life.</div>
+                    <h3>Guitar Basics</h3>
 
-            </article>
+                    <img src="svgs/guitar.svg" alt="Guitar">
 
-            <article>
-                <h3>Piano Foundations</h3>
+                    <p>Learn chords, strumming patterns and techniques to bring your favourite melodies to life.</p>
 
-                <img src="" alt="Piano">
+                </article>
 
-                <div>Build a strong musical foundation through keyboard techniques, melodies and music theory.</div>
-            </article>
+                <article class="card">
 
-            <article> 
-                <h3>Violin Melodies</h3>
+                    <h3>Piano Foundations</h3>
 
-                <img src="" alt="Violin">
+                    <img src="svgs/piano.svg" alt="Piano">
 
-                <div></div>
+                    <p>Build a strong musical foundation through keyboard techniques, melodies and music theory.</p>
 
-            </article>
+                </article>
 
-            <article> 
-                <h3>Drums Rhythms</h3>
+                <article class="card">
 
-                <img src="" alt="Drums">
+                    <h3>Violin Melodies</h3>
 
-                <div>Develop your sense of rhythm, timing and coordination through practical sessions.</div>
-                
-            </article>
+                    <img src="svgs/violin.svg" alt="Violin">
 
-            <article> 
-                <h3>Vocal Training</h3>
+                    <p>Discover bowing techniques, posture and smooth tones while playing graceful melodies.</p>
 
-                <img src="" alt="Vocal">
+                </article>
 
-                <div>Explore your voice, improve pitch and build confidence through guided singing lessons.</div>
-            </article>
+                <article class="card">
 
-            <!-- Courses -->
+                    <h3>Drums Rhythms</h3>
 
-                <input type="search" placeholder="What are you into?!" id="search">
+                    <img src="svgs/drums.svg" alt="Drums">
 
-                <a href="#">
-                    <button>Browse all programs</button>
-                </a>                    
-    </section>
+                    <p>Develop your sense of rhythm, timing and coordination through practical sessions.</p>
 
-    <section > 
-        <h2>About Serenova</h2>
+                </article>
 
-        <div>
+                <article class="card">
 
-            Serenova Music School, a place where creativity, passion and music come together.
+                    <h3>Vocal Training</h3>
 
-            We believe that music is more than just learning an instrument; it is a way of expressing yourself.
+                    <img src="svgs/vocals.svg" alt="Microphone">
 
-            Our academy provides a supportive learning environment for beginners as well as aspiring musicians.
+                    <p>Explore your voice, improve pitch and build confidence through guided singing lessons.</p>
 
-            <img src="" alt="Serenova Music School">
+                </article>
 
-        </div>
+            </div>
+            <!-- Search the courses -->
+
+                <form action="courses.html">
+
+                <label for="search">Browse All courses</label>
+
+                <input type="search" id="search" placeholder="What are you into?">
+                <button type="submit">Search</button>
+
+            </form>  
 
     </section>
+
+  <!-- About -->
+
+        <section id="about">
+
+            <h2>About Serenova</h2>
+
+            <p>Serenova Music School is a place where creativity, passion and music come together.</p>
+
+            <p>We believe that music is more than just learning an instrument; it is a way of expressing yourself.</p>
+
+            <p>Our academy provides a supportive learning environment for beginners as well as aspiring musicians.</p>
+
+            <img src="svgs/about.svg" alt="Serenova Music School classroom">
+
+        </section>
+
+
+    <!-- User roles -->
 
     <section id="Roles">
 
         <h2> Our User Roles </h2>
 
-            <div> Sere provides a role-based management system designed to make music education organised and accessible. </div>
+            <p> Sere provides a role-based management system designed to make music education organised and accessible. </p>
 
-        <article id="Admin">
+        <article>
             
-            <h3 id="Manage">Administrator</h3>
+            <h3>Administrator</h3>
 
-                <div>Responsible for managing the academy, including students, teachers, courses, schedules and overall operations.</div>
+            <p>Responsible for managing the academy, including students, teachers, courses, schedules and overall operations.</p>
 
         </article>
 
-        <article id="Class">
+        <article>
 
             <h3> Teachers </h3>
 
-                <div> See your Students, approve or reject class requests, and mark classes completed.</div>
+                <p> See your Students, approve or reject class requests, and mark classes completed.</p>
+
         </article>
 
-        <article class="Enroll">
+        <article>
 
             <h3>Students</h3>
             
-          <div> Can explore courses, enroll in classes, view schedules and access personal learning information. </div>  
+            <p> Can explore courses, enroll in classes, view schedules and access personal learning information. </p>  
 
         </article>
 
-        <div class="describe_role"> Each user receives access to features according to their assigned role, ensuring an organised and efficient experience. </div>
+        <div> Each user receives access to features according to their assigned role, ensuring an organised and efficient experience. </div>
 
     </section>
 
-    <section>
+    <section id=""Contact>
+
         <h2>Contact</h2>
 
         <p>Have questions about our courses, schedules or enrollment process? We'd love to hear from you.</p>
 
-        <h4>Email: </h4>
-        <a href=""> school@serenova.com </a>
+        <address>
+                <p>
+                    <strong>Email:</strong> <a href="mailto:school@serenova.com">school@serenova.com</a>
+                </p>
 
-        <h4>Phone Number: </h4> <p>+91 XXXXX XXXXX</p>
+                <p>
+                    <strong>Phone Number:</strong> +91 XXXXX XXXXX
+                </p>
 
-        Phone number: +91 xxxxx xxxxx
+                <p>
+                    <strong>Hours:</strong> Monday - Friday: 9:00 AM - 6:00 PM
+                </p>
+        </address>
 
-        <small>We're always happy to help you begin your musical journey!</small>
+            <p>
+            <small>We're always happy to help you begin your musical journey!</small>
+            </p>
+
+        <h4> Location: </h4>
+
+        <div class="embed-map-fixed">
+
+            <div class="embed-map-container">
+
+                <iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&height=400&hl=en&q=India&t=p&z=14&ie=UTF8&iwloc=B&output=embed"></iframe>
+                <a href="https://sprunkiretake.net" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">Sprunki</a>
+            </div>
+
+            <style>.embed-map-fixed{position:relative;text-align:right;width:600px;height:400px;}.embed-map-container{overflow:hidden;background:none!important;width:600px;height:400px;}.embed-map-frame{width:600px!important;height:400px!important;}</style>
+
+        </div>
 
     </section>
 
 </main>
 
-<hr>
+    <!-- Footer -->
 
     <footer>
-        <section>
 
-            <h3>SERENOVA</h3>
-        
-         <div class="c1">
+        <section class="upfooter">
 
-            <h4>EXPLORE</h4>
-            
-            <a href="#"> Courses</a>
-            <a href="#"> About Us</a>
-            <a href="#"> Contact</a>
+            <div>
 
-         </div>
+                <img src="svgs/logo-light.svg" alt="Serenova logo">
 
-         <div>
+                <p>
+                    <strong>
+                        SERENOVA
+                    </strong>
+                </p>
+            </div>
 
-            <h4 class="c2">STUDENTS</h4>
+            <div>
 
-            <a href="#">Login</a>
-            <a href="#">Bookings</a>
-            <a href="#">My courses</a>
+                <h3>EXPLORE</h3>
 
-         </div>
-        
-         <div class="c1">
+                <a href="courses.html">Courses</a>
 
-            <h4>TEACHERS</h4>
+                <a href="index.html#contact">Contact</a>
 
-            <a href="#"> Dashboard</a>
-            <a href="#"> Class Schedule</a>
+            </div>
 
-         </div>
+            <div>
 
-         <div class="c2">
+                <h3>STUDENTS</h3>
 
-            <h4>ADMIN</h4>
+                <a href="login.html">Login</a>
 
-            <a href="#">Dashboard</a>
-            <a href="#">Reports</a>
-         </div>
-        
-        </section> 
+                <a href="#">Bookings</a>
 
-        <div class="footer-bottom">
+                <a href="courses.html">My courses</a>
 
-            <p>  
-                &copy; 2026 Serenova Music School
-                Academic Project - CSE326
-            </p> 
+            </div>
 
-        </div>
+            <div>
+
+                <h3>TEACHERS</h3>
+
+                <a href="#">Dashboard</a>
+
+                <a href="#">Class Schedule</a>
+
+            </div>
+
+            <div>
+
+                <h3>ADMIN</h3>
+
+                <a href="#">Dashboard</a>
+
+                <a href="#">Reports</a>
+
+            </div>
+
+        </section>
+
+        <section class="lower_footer">
+
+            <p>&copy; 2026 Serenova Music School | Academic Project - CSE326</p>
+
+        </section>
 
     </footer>
 
