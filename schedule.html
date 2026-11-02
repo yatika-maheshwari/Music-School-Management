@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule</title>
+    <title>Class Schedule | Serenova Music School</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Praise&family=Srisakdi:wght@400;700&family=Tsukimi+Rounded:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header> Serenova Music School    
-        <nav class="navbar"> Menu <!-- Sidebar area  -->
-        
-            <a href="#" id = "Home"> Home</a>
-            <a href="#" class="course">Courses</a>
-            <a href="#">Teachers</a>
-            <a href="#">Contact</a>
+
+    <!-- Navigation Area -->
+    <header>
+        <img src="svgs/logo-light.svg" alt="Serenova Music School logo">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="teachers.html">Teachers</a>
+            <a href="students.html">Students</a>
+            <a href="Bookings.html">Bookings</a>
+            <a href="Dashboard.html">Dashboard</a>
             <a href="login.html">Login</a>
         </nav>
     </header>
 
     <main>
+
+        <!-- Heading -->
         <section class="schedule-heading">
             <h1>Class Schedule</h1>
-            <p>
-                See your weekly classes at a glance.
-            </p>
+            <p>See your weekly classes at a glance.</p>
+
             <div class="teacher-box">
                 Teacher: <span id="scheduleTeacherName">Neha Kapoor</span>
             </div>
@@ -32,32 +45,32 @@
         <section class="schedule-filter">
 
             <form>
-                <label for="scheduleTeacher">Teacher:</label>
+                <div class="filter-item">
+                    <label for="scheduleTeacher">Teacher:</label>
+                    <select id="scheduleTeacher" name="teacher">
+                        <option value="all">All teachers</option>
+                        <option value="Aman Verma">Aman Verma</option>
+                        <option value="Neha Kapoor">Neha Kapoor</option>
+                        <option value="Riya Sen">Riya Sen</option>
+                        <option value="Karan Mehta">Karan Mehta</option>
+                        <option value="Simran Kaur">Simran Kaur</option>
+                    </select>
+                </div>
 
-                <select id="scheduleTeacher" name="teacher">
-                    <option>All teachers</option>
-                    <option>Aman Verma</option>
-                    <option>Neha Kapoor</option>
-                    <option>Riya Sen</option>
-                    <option>Karan Mehta</option>
-                    <option>Simran Kaur</option>
-                </select>
-
-
-                <label for="scheduleDay">Day:</label>
-
-                <select id="scheduleDay" name="day">
-                    <option>All days</option>
-                    <option>Monday</option>
-                    <option>Tuesday</option>
-                    <option>Wednesday</option>
-                    <option>Thursday</option>
-                    <option>Friday</option>
-                    <option>Saturday</option>
-                </select>
+                <div class="filter-item">
+                    <label for="scheduleDay">Day:</label>
+                    <select id="scheduleDay" name="day">
+                        <option value="all">All days</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    </select>
+                </div>
 
                 <button type="button" id="scheduleBtn">Show</button>
-
             </form>
 
         </section>
@@ -67,6 +80,16 @@
 
             <h2>This Week</h2>
 
+            <fieldset class="slot-options">
+                <legend>Show slots</legend>
+
+                <input type="checkbox" name="booked" id="booked" checked>
+                <label for="booked">Booked class</label>
+
+                <input type="checkbox" name="free-cls" id="free-cls" checked>
+                <label for="free-cls">Free slot</label>
+            </fieldset>
+
             <div class="table-container">
 
                 <table border="1">
@@ -74,20 +97,20 @@
 
                     <thead>
                         <tr>
-                            <th>Time</th>
-                            <th>Monday</th>
-                            <th>Tuesday</th>
-                            <th>Wednesday</th>
-                            <th>Thursday</th>
-                            <th>Friday</th>
-                            <th>Saturday</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Monday</th>
+                            <th scope="col">Tuesday</th>
+                            <th scope="col">Wednesday</th>
+                            <th scope="col">Thursday</th>
+                            <th scope="col">Friday</th>
+                            <th scope="col">Saturday</th>
                         </tr>
                     </thead>
 
                     <tbody id="timetableBody">
 
                         <tr>
-                            <th>10:00 AM</th>
+                            <th scope="row">10:00 AM</th>
                             <td class="booked">
                                 <strong>Piano</strong><br>
                                 <small>Meera Nair</small>
@@ -103,7 +126,7 @@
                         </tr>
 
                         <tr>
-                            <th>11:00 AM</th>
+                            <th scope="row">11:00 AM</th>
                             <td class="free">Free</td>
                             <td class="free">Free</td>
                             <td class="booked">
@@ -116,7 +139,7 @@
                         </tr>
 
                         <tr>
-                            <th>12:00 PM</th>
+                            <th scope="row">12:00 PM</th>
                             <td class="free">Free</td>
                             <td class="free">Free</td>
                             <td class="free">Free</td>
@@ -126,7 +149,7 @@
                         </tr>
 
                         <tr>
-                            <th>02:00 PM</th>
+                            <th scope="row">02:00 PM</th>
                             <td class="free">Free</td>
                             <td class="booked">
                                 <strong>Guitar</strong><br>
@@ -139,7 +162,7 @@
                         </tr>
 
                         <tr>
-                            <th>04:00 PM</th>
+                            <th scope="row">04:00 PM</th>
                             <td class="free">Free</td>
                             <td class="free">Free</td>
                             <td class="free">Free</td>
@@ -152,7 +175,7 @@
                         </tr>
 
                         <tr>
-                            <th>06:00 PM</th>
+                            <th scope="row">06:00 PM</th>
                             <td class="free">Free</td>
                             <td class="free">Free</td>
                             <td class="free">Free</td>
@@ -166,15 +189,10 @@
 
                     </tbody>
                 </table>
-                
-                <input type="checkbox" name="booked" id="booked">
-                <label for="booked">Booked class</label>
-                <input type="checkbox" name="free-cls" id="free-cls">
-                <label for="free-cls">Free slot</label>
 
-                 <p>Total classes this week: <strong id="classCount">6</strong></p>
+            </div>
 
-                  </div>
+            <p class="class-total">Total classes this week: <strong id="classCount">6</strong></p>
 
             <p id="scheduleMessage"></p>
 
@@ -188,15 +206,17 @@
             <div class="table-container">
 
                 <table border="1">
+                    <caption>Upcoming Classes</caption>
+
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Date</th>
-                            <th>Day</th>
-                            <th>Time</th>
-                            <th>Course</th>
-                            <th>Student</th>
-                            <th>Status</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Day</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Course</th>
+                            <th scope="col">Student</th>
+                            <th scope="col">Status</th>
                         </tr>
                     </thead>
 
@@ -212,7 +232,7 @@
                             <td><span class="approved">Approved</span></td>
                         </tr>
 
-                        <tr>
+                        <tr class="row2">
                             <td>2</td>
                             <td>03-11-2026</td>
                             <td>Tue</td>
@@ -232,7 +252,7 @@
                             <td><span class="approved">Approved</span></td>
                         </tr>
 
-                        <tr>
+                        <tr class="row4">
                             <td>4</td>
                             <td>05-11-2026</td>
                             <td>Thu</td>
@@ -252,7 +272,7 @@
                             <td><span class="approved">Approved</span></td>
                         </tr>
 
-                        <tr>
+                        <tr class="row6">
                             <td>6</td>
                             <td>07-11-2026</td>
                             <td>Sat</td>
@@ -271,61 +291,48 @@
 
     </main>
 
+    <!-- Footer -->
     <footer>
-        <section>
 
-            <h3>SERENOVA</h3>
-        
-         <div class="c1">
+        <section class="upfooter">
 
-            <h4>EXPLORE</h4>
-            
-            <a href="#"> Courses</a>
-            <a href="#"> About Us</a>
-            <a href="#"> Contact</a>
+            <div>
+                <img src="svgs/logo-light.svg" alt="Serenova logo">
+                <p><strong>SERENOVA</strong></p>
+            </div>
 
-         </div>
+            <div>
+                <h3>EXPLORE</h3>
+                <a href="courses.html">Courses</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
 
-         <div>
+            <div>
+                <h3>STUDENTS</h3>
+                <a href="login.html">Login</a>
+                <a href="Bookings.html">Bookings</a>
+                <a href="courses.html">My courses</a>
+            </div>
 
-            <h4 class="c2">STUDENTS</h4>
+            <div>
+                <h3>TEACHERS</h3>
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="schedule.html">Class Schedule</a>
+            </div>
 
-            <a href="#">Login</a>
-            <a href="#">Bookings</a>
-            <a href="#">My courses</a>
+            <div>
+                <h3>ADMIN</h3>
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="Reports.html">Reports</a>
+            </div>
 
-         </div>
-        
-         <div class="c1">
+        </section>
 
-            <h4>TEACHERS</h4>
-
-            <a href="#"> Dashboard</a>
-            <a href="#"> Class Schedule</a>
-
-         </div>
-
-         <div class="c2">
-
-            <h4>ADMIN</h4>
-
-            <a href="#">Dashboard</a>
-            <a href="#">Reports</a>
-         </div>
-        
-        </section> 
-
-        <div class="footer-bottom">
-
-            <p>  
-                &copy; 2026 Serenova Music School
-                Academic Project - CSE326
-            </p> 
-
-        </div>
+        <section class="lower_footer">
+            <p>&copy; 2026 Serenova Music School | Academic Project - CSE326</p>
+        </section>
 
     </footer>
 
-  
 </body>
 </html>
