@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+</head>
+<body>
+    <header> Serenova Music School    
+        <nav class="navbar"> Menu <!-- Sidebar area  -->
+        
+            <a href="#" id = "Home"> Home</a>
+            <a href="#" class="course">Courses</a>
+            <a href="#">Teachers</a>
+            <a href="#">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="schedule-heading">
+            <h1>Class Schedule</h1>
+            <p>
+                See your weekly classes at a glance.
+            </p>
+            <div class="teacher-box">
+                Teacher: <span id="scheduleTeacherName">Neha Kapoor</span>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="schedule-filter">
+
+            <form>
+                <label for="scheduleTeacher">Teacher:</label>
+
+                <select id="scheduleTeacher" name="teacher">
+                    <option>All teachers</option>
+                    <option>Aman Verma</option>
+                    <option>Neha Kapoor</option>
+                    <option>Riya Sen</option>
+                    <option>Karan Mehta</option>
+                    <option>Simran Kaur</option>
+                </select>
+
+
+                <label for="scheduleDay">Day:</label>
+
+                <select id="scheduleDay" name="day">
+                    <option>All days</option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                </select>
+
+                <button type="button" id="scheduleBtn">Show</button>
+
+            </form>
+
+        </section>
+
+        <!-- Weekly Timetable -->
+        <section class="weekly-schedule">
+
+            <h2>This Week</h2>
+
+            <div class="table-container">
+
+                <table border="1">
+                    <caption>Weekly Class Schedule</caption>
+
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="timetableBody">
+
+                        <tr>
+                            <th>10:00 AM</th>
+                            <td class="booked">
+                                <strong>Piano</strong><br>
+                                <small>Meera Nair</small>
+                            </td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="booked">
+                                <strong>Piano</strong><br>
+                                <small>Diya Sharma</small>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>11:00 AM</th>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="booked">
+                                <strong>Piano</strong><br>
+                                <small>Diya Sharma</small>
+                            </td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                        </tr>
+
+                        <tr>
+                            <th>12:00 PM</th>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                        </tr>
+
+                        <tr>
+                            <th>02:00 PM</th>
+                            <td class="free">Free</td>
+                            <td class="booked">
+                                <strong>Guitar</strong><br>
+                                <small>Tanvi Joshi</small>
+                            </td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                        </tr>
+
+                        <tr>
+                            <th>04:00 PM</th>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="booked">
+                                <strong>Guitar</strong><br>
+                                <small>Tanvi Joshi</small>
+                            </td>
+                            <td class="free">Free</td>
+                        </tr>
+
+                        <tr>
+                            <th>06:00 PM</th>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                            <td class="booked">
+                                <strong>Piano</strong><br>
+                                <small>Meera Nair</small>
+                            </td>
+                            <td class="free">Free</td>
+                            <td class="free">Free</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                
+                <input type="checkbox" name="booked" id="booked">
+                <label for="booked">Booked class</label>
+                <input type="checkbox" name="free-cls" id="free-cls">
+                <label for="free-cls">Free slot</label>
+
+                 <p>Total classes this week: <strong id="classCount">6</strong></p>
+
+                  </div>
+
+            <p id="scheduleMessage"></p>
+
+        </section>
+
+        <!-- Upcoming Classes -->
+        <section class="upcoming-classes">
+
+            <h2>Upcoming Classes</h2>
+
+            <div class="table-container">
+
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Date</th>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Course</th>
+                            <th>Student</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="upcomingBody">
+
+                        <tr>
+                            <td>1</td>
+                            <td>02-11-2026</td>
+                            <td>Mon</td>
+                            <td>10:00 AM</td>
+                            <td>Piano</td>
+                            <td>Meera Nair</td>
+                            <td><span class="approved">Approved</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>03-11-2026</td>
+                            <td>Tue</td>
+                            <td>02:00 PM</td>
+                            <td>Guitar</td>
+                            <td>Tanvi Joshi</td>
+                            <td><span class="approved">Approved</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>04-11-2026</td>
+                            <td>Wed</td>
+                            <td>11:00 AM</td>
+                            <td>Piano</td>
+                            <td>Diya Sharma</td>
+                            <td><span class="approved">Approved</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>05-11-2026</td>
+                            <td>Thu</td>
+                            <td>06:00 PM</td>
+                            <td>Piano</td>
+                            <td>Meera Nair</td>
+                            <td><span class="approved">Approved</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>06-11-2026</td>
+                            <td>Fri</td>
+                            <td>04:00 PM</td>
+                            <td>Guitar</td>
+                            <td>Tanvi Joshi</td>
+                            <td><span class="approved">Approved</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>07-11-2026</td>
+                            <td>Sat</td>
+                            <td>10:00 AM</td>
+                            <td>Piano</td>
+                            <td>Diya Sharma</td>
+                            <td><span class="approved">Approved</span></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <section>
+
+            <h3>SERENOVA</h3>
+        
+         <div class="c1">
+
+            <h4>EXPLORE</h4>
+            
+            <a href="#"> Courses</a>
+            <a href="#"> About Us</a>
+            <a href="#"> Contact</a>
+
+         </div>
+
+         <div>
+
+            <h4 class="c2">STUDENTS</h4>
+
+            <a href="#">Login</a>
+            <a href="#">Bookings</a>
+            <a href="#">My courses</a>
+
+         </div>
+        
+         <div class="c1">
+
+            <h4>TEACHERS</h4>
+
+            <a href="#"> Dashboard</a>
+            <a href="#"> Class Schedule</a>
+
+         </div>
+
+         <div class="c2">
+
+            <h4>ADMIN</h4>
+
+            <a href="#">Dashboard</a>
+            <a href="#">Reports</a>
+         </div>
+        
+        </section> 
+
+        <div class="footer-bottom">
+
+            <p>  
+                &copy; 2026 Serenova Music School
+                Academic Project - CSE326
+            </p> 
+
+        </div>
+
+    </footer>
+
+  
+</body>
+</html>
