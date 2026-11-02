@@ -1,160 +1,394 @@
-*{
-    margin: 0;
-    padding: 0;
+/* Fonts - same index.html font*/
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Praise&family=Srisakdi:wght@400;700&family=Tsukimi+Rounded:wght@400;500;700&display=swap');
+
+/* Basics */
+* {
+    box-sizing: border-box;
 }
 
-.page-heading{
-    color: #4B2E83;
+body {
+    margin: 0;
+    background-color: #faf7ff;
+    color: #2b2b3a;
+    font-family: 'Tsukimi Rounded', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: #4b2e83;
+}
+
+button, input, select {
+    font-family: 'Tsukimi Rounded', Arial, sans-serif;
+}
+
+/* Headings */
+h1 {
+    font-family: 'Praise', cursive;
+    font-size: 4.5rem;
+    font-weight: normal;
+    color: #4b2e83;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Srisakdi', cursive;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #4b2e83;
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #c9a227;
+}
+
+h3 {
+    font-family: 'Srisakdi', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #4b2e83;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #4b2e83;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-bottom: 3px solid #c9a227;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header img {
+    height: 70px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    color: #faf7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    background-color: #1e1433;
+    border-bottom-color: #c9a227;
+}
+
+/* Old header (courses.html and students.html) - so it does not break.
+   Better: copy the header from teachers.html into them. */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Praise', cursive;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #faf7ff;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav-links a {
+    color: #faf7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover {
+    background-color: #1e1433;
+    border-bottom-color: #c9a227;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    background-color: #4b2e83;
+    color: #faf7ff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c9a227;
+    color: #1e1433;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 6px 12px;
+    margin: 2px;
+    font-size: 0.9rem;
+}
+
+.delete-btn {
+    background-color: #f4b942;
+    color: #1e1433;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+    color: #ffffff;
+}
+
+/* Page heading */
+.page-heading {
     text-align: center;
     margin-top: 15px;
 }
 
-.search-section h2{
-    color: #4B2E83;
-    margin-top: 5px;
-    font-weight:bolder;
+.page-heading p {
+    font-size: 1.2rem;
+    margin-top: 0;
 }
 
-#studentCount{
-    border: 2px;
-    border-radius: 5px;
-    background-color: #4B2E83;
+.student-count {
+    display: inline-block;
+    background-color: #4b2e83;
     color: #ffffff;
-    padding: 5px;
-    width: 20%;
-}
-
-.search-section{
-    background-color: #F0EAFB;
-    border: 2px;
+    font-weight: 700;
     border-radius: 5px;
-    padding: 5px 5px 7px 7px;
-    margin-top: 20px;
+    padding: 6px 20px;
+    margin-top: 10px;
 }
 
-.search-form{
-    padding: 10px 5px 5px 3px;
-}
-
-.search-form button{
-    background-color: #4B2E83;
-    color: #ffffff;
-    border: 2px;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-#courseSearch,
-#levelFilter,
-#instrumentFilter,
-#teacherSearch,
-#status,
-#studentSearch{
-    border: 2px ;
-    border-color: #b19ed4;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.table-section h2{
-    color: #4B2E83;
-    margin-top: 20px;
-    font-weight:bolder;
-}
-
-table{
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
+/* Search and filter box */
+.search-section {
+    background-color: #f0eafb;
+    border: 2px solid #d9ccff;
     border-radius: 8px;
-    overflow: hidden;
+    padding: 10px 20px 15px;
     margin-top: 20px;
 }
 
-.table-head{
-    background-color: #4B2E83;
+.search-section h2,
+.add-section h2 {
+    margin-top: 10px;
 }
 
-.table-head th{
-    font-weight: 300;
-    font-size: medium;
-    padding: 17px 15px;
-    color: #ffffff;
-    text-align: center;
-    border-top: none;
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0 5px;
 }
 
-table th,
-table td{
-    border: none;
-    padding: 17px 15px;
-    text-align: center;
-}
-
-table tbody tr{
+.search-form input,
+.search-form select {
+    flex: 1 1 180px;
+    padding: 8px;
     background-color: #ffffff;
+    border: 2px solid #b19ed4;
+    border-radius: 5px;
+}
+
+/* Tables (same look as the schedule page) */
+.table-wrapper {
+    background-color: #ffffff;
+    border: 1px solid #d9ccff;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+caption {
+    font-family: 'Srisakdi', cursive;
+    font-size: 1.3rem;
+    color: #4b2e83;
     padding: 10px;
+}
+
+th, td {
+    border: none;
+    padding: 15px 12px;
+    text-align: center;
+}
+
+.table-head th {
+    background-color: #4b2e83;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+tr {
+    background-color: #ffffff;
 }
 
 .row2,
 .row4,
-.row6{
-    background-color: #F0EAFB;
+.row6 {
+    background-color: #f0eafb;
 }
 
-.edit-btn{
-    background-color: #4B2E83;
-    color: #ffffff;
-    padding: 5px;
-    border: 2px;
-    border-radius: 5px;
+tr:hover {
+    background-color: #e6dcff;
 }
 
-.delete-btn{
-    background-color: #F4B942;
-    color: black;
-    padding: 5px;
-    border: 2px;
-    border-radius: 5px;
+/* Status badges */
+.student-active,
+.student-inactive {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 2px 12px;
 }
 
-.add-section h2{
-    margin-top: 12px;
-    margin-bottom: 20px;
-    font-size: 25px;
-    font-weight: 600;
+.student-active {
+    background-color: #dff3e4;
+    color: #1d6b34;
 }
 
-.add-section{
-    color: #4B2E83;
-    border: 2px solid #F0EAFB;
+.student-inactive {
+    background-color: #fde2e2;
+    color: #9b2c2c;
 }
 
-.add-section input,
-#courseInstrument,
-#courseLevel,
-#courseTeacher{
-    border: 2px solid #F0EAFB;
-    border-radius: 5px;
-    padding: 5px; 
-    color: #857c96;  
+/* Add forms (grid: 2 columns) */
+.add-section {
+    background-color: #ffffff;
+    color: #4b2e83;
+    border: 2px solid #f0eafb;
+    border-radius: 8px;
+    padding: 10px 20px 20px;
+    margin-top: 40px;
 }
 
-.form-group{
+.add-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+    margin-top: 20px;
+}
+
+.form-group {
     display: flex;
     flex-direction: column;
-    width: 50%;
 }
 
-/* Pendinggggggggg */
+label {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
 
-
-#addCourseBtn{
-    background-color: #4B2E83;
-    color: #ffffff;
-    border: 2px;
+.add-form input,
+.add-form select {
+    width: 100%;
+    padding: 8px;
+    color: #2b2b3a;
+    background-color: #ffffff;
+    border: 2px solid #d9ccff;
     border-radius: 5px;
-    padding: 5px;
-    width: 100px;
 }
 
+.add-form button,
+.teacher-add-button,
+.student-add-button {
+    grid-column: 1 / span 2;
+    justify-self: start;
+}
+
+#courseMessage {
+    text-align: center;
+    color: #4b2e83;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+/*Footer*/
+
+footer {
+    background-color: #1e1433;
+    color: #faf7ff;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.upfooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+footer h3 {
+    color: #c9a227;
+    font-family: 'Tsukimi Rounded', Arial, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+}
+
+footer img {
+    height: 50px;
+    width: auto;
+}
+
+footer a {
+    display: block;
+    color: #d9ccff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #c9a227;
+    text-decoration: underline;
+}
+
+.lower_footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #4b2e83;
+}
