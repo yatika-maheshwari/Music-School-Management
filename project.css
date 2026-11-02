@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.page-heading{
+    color: #4B2E83;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.search-section h2{
+    color: #4B2E83;
+    margin-top: 5px;
+    font-weight:bolder;
+}
+
+#studentCount{
+    border: 2px;
+    border-radius: 5px;
+    background-color: #4B2E83;
+    color: #ffffff;
+    padding: 5px;
+    width: 20%;
+}
+
+.search-section{
+    background-color: #F0EAFB;
+    border: 2px;
+    border-radius: 5px;
+    padding: 5px 5px 7px 7px;
+    margin-top: 20px;
+}
+
+.search-form{
+    padding: 10px 5px 5px 3px;
+}
+
+.search-form button{
+    background-color: #4B2E83;
+    color: #ffffff;
+    border: 2px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#courseSearch,
+#levelFilter,
+#instrumentFilter,
+#teacherSearch,
+#status,
+#studentSearch{
+    border: 2px ;
+    border-color: #b19ed4;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.table-section h2{
+    color: #4B2E83;
+    margin-top: 20px;
+    font-weight:bolder;
+}
+
+table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.table-head{
+    background-color: #4B2E83;
+}
+
+.table-head th{
+    font-weight: 300;
+    font-size: medium;
+    padding: 17px 15px;
+    color: #ffffff;
+    text-align: center;
+    border-top: none;
+}
+
+table th,
+table td{
+    border: none;
+    padding: 17px 15px;
+    text-align: center;
+}
+
+table tbody tr{
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.row2,
+.row4,
+.row6{
+    background-color: #F0EAFB;
+}
+
+.edit-btn{
+    background-color: #4B2E83;
+    color: #ffffff;
+    padding: 5px;
+    border: 2px;
+    border-radius: 5px;
+}
+
+.delete-btn{
+    background-color: #F4B942;
+    color: black;
+    padding: 5px;
+    border: 2px;
+    border-radius: 5px;
+}
+
+.add-section h2{
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.add-section{
+    color: #4B2E83;
+    border: 2px solid #F0EAFB;
+}
+
+.add-section input,
+#courseInstrument,
+#courseLevel,
+#courseTeacher{
+    border: 2px solid #F0EAFB;
+    border-radius: 5px;
+    padding: 5px; 
+    color: #857c96;  
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/* Pendinggggggggg */
+
+
+#addCourseBtn{
+    background-color: #4B2E83;
+    color: #ffffff;
+    border: 2px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+}
+
