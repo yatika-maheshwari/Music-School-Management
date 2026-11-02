@@ -3,39 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Courses - Serenova Music School</title>
-    
+    <link rel="stylesheet" href="project.css">
 </head>
-    
+
 <body>
 
     <!-- NAVBAR -->
-    
-    <header> 
-        
-        <img src="svgs/logo-light.svg" alt="Serenova Music School logo"> 
-
-        <nav>  
-
-            <a href="index.html" id = "Home"> Home</a>
-
-            <a href="courses.html" class="course">Courses</a>
-
-            <a href="teachers.html">Teachers</a>
-            
-            <a href="students.html">Students</a>
-
-            <a href="#">Bookings</a>
-
-            <a href="#">Dashboard</a>
-            
-            <a href="login.html">Login</a>
-
+    <header>
+        <nav class="navbar">
+            <h2 class="logo"> Serenova</h2>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="teachers.html">Teachers</a>
+                <a href="students.html">Students</a>
+                <a href="login.html">Login</a>
+            </div>
+                
         </nav>
-
     </header>
-    
+
+
     <main class="courses-container">
 
         <!-- PAGE HEADING -->
@@ -84,7 +73,7 @@
             <div class="table-wrapper">
 
             <table border="1">
-                <thead>
+                <thead class="table-head">
                     <tr>
                         <th>#</th>
                         <th>Course</th>
@@ -113,7 +102,7 @@
                         </td>
                     </tr>
 
-                    <tr>
+                    <tr class="row2">
                         <td>2</td>
                         <td>Piano Foundations</td>
                         <td>Piano</td>
@@ -141,7 +130,7 @@
                         </td>
                     </tr>
 
-                    <tr>
+                    <tr class="row4">
                         <td>4</td>
                         <td>Drum Rhythms</td>
                         <td>Drums</td>
@@ -169,7 +158,7 @@
                         </td>
                     </tr>
 
-                    <tr>
+                    <tr class="row6">
                         <td>6</td>
                         <td>Advanced Keyboard</td>
                         <td>Keyboard</td>
@@ -191,11 +180,12 @@
 
 
         <!-- ADD COURSE FORM -->
-        <section class="add-section">
+        <div class="add-section">
 
             <h2>Add a New Course</h2>
 
-            <form class="add-form">
+            <form>
+            <div class="add-form">
 
                 <div class="form-group">
                     <label for="courseName">Course Name</label>
@@ -253,81 +243,67 @@
 
             <p id="courseMessage"></p>
 
-        </section>
+        </div>
 
     </main>
 
 
     <!-- FOOTER -->
      <footer>
+        <section>
 
-        <section class="upfooter">
+            <h3>SERENOVA</h3>
+        
+         <div class="c1">
 
-            <div>
+            <h4>EXPLORE</h4>
+            
+            <a href="#"> Courses</a>
+            <a href="#"> About Us</a>
+            <a href="#"> Contact</a>
 
-                <img src="svgs/logo-light.svg" alt="Serenova logo">
+         </div>
 
-                <p>
-                    <strong>
-                        SERENOVA
-                    </strong>
-                </p>
-            </div>
+         <div>
 
-            <div>
+            <h4 class="c2">STUDENTS</h4>
 
-                <h3>EXPLORE</h3>
+            <a href="#">Login</a>
+            <a href="#">Bookings</a>
+            <a href="#">My courses</a>
 
-                <a href="courses.html">Courses</a>
+         </div>
+        
+         <div class="c1">
 
-                <a href="index.html#contact">Contact</a>
+            <h4>TEACHERS</h4>
 
-            </div>
+            <a href="#"> Dashboard</a>
+            <a href="#"> Class Schedule</a>
 
-            <div>
+         </div>
 
-                <h3>STUDENTS</h3>
+         <div class="c2">
 
-                <a href="login.html">Login</a>
+            <h4>ADMIN</h4>
 
-                <a href="#">Bookings</a>
+            <a href="#">Dashboard</a>
+            <a href="#">Reports</a>
+         </div>
+        
+        </section> 
 
-                <a href="courses.html">My courses</a>
+        <div class="footer-bottom">
 
-            </div>
+            <p>  
+                &copy; 2026 Serenova Music School
+                Academic Project - CSE326
+            </p> 
 
-            <div>
-
-                <h3>TEACHERS</h3>
-
-                <a href="#">Dashboard</a>
-
-                <a href="#">Class Schedule</a>
-
-            </div>
-
-            <div>
-
-                <h3>ADMIN</h3>
-
-                <a href="#">Dashboard</a>
-
-                <a href="#">Reports</a>
-
-            </div>
-
-        </section>
-
-        <section class="lower_footer">
-
-            <p>&copy; 2026 Serenova Music School | Academic Project - CSE326</p>
-
-        </section>
+        </div>
 
     </footer>
-
 </body>
-    
 </html>
 
 
