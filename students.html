@@ -4,40 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students</title>
+    <link rel="stylesheet" href="project.css">
 </head>
 <body>
-    <<header> 
-        <img src="svgs/logo-light.svg" alt="Serenova Music School logo"> 
-
-        <nav>  
-
-            <a href="index.html" id = "Home"> Home</a>
-
-            <a href="courses.html" class="course">Courses</a>
-
-            <a href="teachers.html">Teachers</a>
-            
-            <a href="students.html">Students</a>
-
-            <a href="#">Bookings</a>
-
-            <a href="#">Dashboard</a>
-            
+    <header> Serenova Music School    
+        <nav class="navbar"> Menu <!-- Sidebar area  -->
+        
+            <a href="#" id = "Home"> Home</a>
+            <a href="#" class="course">Courses</a>
+            <a href="#">Teachers</a>
+            <a href="#">Contact</a>
             <a href="login.html">Login</a>
-
         </nav>
-
     </header>
-
-    <main class="students-container">
+    <main class="student-container">
 
         <!-- HEADING AND TOTAL COUNT -->
-        <section class="students-heading">
+        <section class="page-heading">
 
-            <div>
+            
                 <h1>Students</h1>
                 <p>Manage all registered students.</p>
-            </div>
+            
 
             <div class="student-count" id="studentCount">
                 Total Students: 8
@@ -47,15 +35,18 @@
 
 
         <!-- SEARCH AND FILTER -->
-        <section class="students-search">
+        <section class="search-section">
+            <h2>
+                Find your Student
+            </h2>
 
-            <form class="students-search-form">
+            <form class="search-form">
 
                 <input type="search"
                     id="studentSearch"
                     placeholder="Search by name or email">
 
-                <select id="courseFilter">
+                <select id="instrumentFilter">
                     <option value="all courses">All Courses</option>
                     <option>Guitar</option>
                     <option>Piano</option>
@@ -64,7 +55,7 @@
                     <option>Vocals</option>
                 </select>
 
-                <select id="statusFilter">
+                <select id="status">
                     <option value="">All Status</option>
                     <option>Active</option>
                     <option>Inactive</option>
@@ -78,13 +69,15 @@
 
 
         <!-- STUDENTS TABLE -->
-        <section class="students-table-section">
-
-            <div class="students-table-wrapper">
+        <section class="table-section">
+            <h2>
+                Available Students
+            </h2>
+            <div class="table-wrapper">
 
                 <table border="1">
 
-                    <thead>
+                    <thead class="table-head">
                         <tr>
                             <th>#</th>
                             <th>Name</th>
@@ -95,7 +88,7 @@
                         </tr>
                     </thead>
 
-                    <tbody id="studentBody">
+                    <tbody>
 
                         <tr>
                             <td>1</td>
@@ -104,20 +97,20 @@
                             <td>Guitar</td>
                             <td><span class="student-active">Active</span></td>
                             <td>
-                                <button type="button" class="student-edit">Edit</button>
-                                <button type="button" class="student-delete">Delete</button>
+                                <button type="button" class="edit-btn">Edit</button>
+                                <button type="button" class="delete-btn">Delete</button>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr class="row2">
                             <td>2</td>
                             <td>Diya Sharma</td>
                             <td>diya@example.com</td>
                             <td>Piano</td>
                             <td><span class="student-active">Active</td>
                             <td>
-                                <button type="button" class="student-edit">Edit</button>
-                                <button type="button" class="student-delete">Delete</button>
+                                <button type="button" class="edit-btn">Edit</button>
+                                <button type="button" class="delete-btn">Delete</button>
                             </td>
                         </tr>
 
@@ -128,20 +121,20 @@
                             <td>Drums</td>
                             <td><span class="student-active">Active</td>
                             <td>
-                                <button type="button" class="student-edit">Edit</button>
-                                <button type="button" class="student-delete">Delete</button>
+                                <button type="button" class="edit-btn">Edit</button>
+                                <button type="button" class="delete-btn">Delete</button>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr class="row4">
                             <td>4</td>
                             <td>Isha Gupta</td>
                             <td>isha@example.com</td>
                             <td>Violin</td>
                             <td><span class="student-inactive">Inactive</span></td>
                             <td>
-                                <button type="button" class="student-edit">Edit</button>
-                                <button type="button" class="student-delete">Delete</button>
+                                <button type="button" class="edit-btn">Edit</button>
+                                <button type="button" class="delete-btn">Delete</button>
                             </td>
                         </tr>
 
@@ -152,32 +145,32 @@
                             <td>Vocals</td>
                             <td><span class="student-active">Active</span></td>
                             <td>
-                                <button type="button" class="student-edit">Edit</button>
-                                <button type="button" class="student-delete">Delete</button>
+                                <button type="button" class="edit-btn">Edit</button>
+                                <button type="button" class="delete-btn">Delete</button>
                             </td>
                         </tr>
 
-                        <tr>
+                        <tr class="row6">
                             <td>6</td>
                             <td>Meera Nair</td>
                             <td>meera@example.com</td>
                             <td>Piano</td>
                             <td><span class="student-active">Active</span></td>
                             <td>
-                                <button type="button" class="student-edit">Edit</button>
-                                <button type="button" class="student-delete">Delete</button>
+                                <button type="button" class="edit-btn">Edit</button>
+                                <button type="button" class="delete-btn">Delete</button>
                             </td>
                         </tr>
 
                         <tr>
-                            <td>8</td>
+                            <td>7</td>
                             <td>Arjun Rao</td>
                             <td>arjun@example.com</td>
                             <td>Guitar</td>
                             <td><span class="student-inactive">Inactive</span></td>
                             <td>
-                                <button type="button" class="student-edit">Edit</button>
-                                <button type="button" class="student-delete">Delete</button>
+                                <button type="button" class="edit-btn">Edit</button>
+                                <button type="button" class="delete-btn">Delete</button>
                             </td>
                         </tr>
 
@@ -191,13 +184,13 @@
 
 
         <!-- ADD STUDENT FORM -->
-        <section class="add-student-section">
+        <section class="add-section">
 
             <h2>Add a New Student</h2>
 
-            <form class="add-student-form">
+            <form class="add-form">
 
-                <div class="student-form-group">
+                <div class="form-group">
                     <label for="studentName">Student Name</label>
                     <input type="text"
                         id="studentName"
@@ -206,7 +199,7 @@
                 </div>
 
 
-                <div class="student-form-group">
+                <div class="form-group">
                     <label for="studentEmail">Email</label>
                     <input type="email"
                         id="studentEmail"
@@ -215,9 +208,9 @@
                 </div>
 
 
-                <div class="student-form-group">
-                    <label for="studentCourse">Course</label>
-                    <select id="studentCourse">
+                <div class="form-group">
+                    <label for="instrumentFilter">Course</label>
+                    <select id="instrumentFilter">
                         <option>Guitar</option>
                         <option>Piano</option>
                         <option>Violin</option>
@@ -227,9 +220,9 @@
                 </div>
 
 
-                <div class="student-form-group">
-                    <label for="studentStatus">Status</label>
-                    <select id="studentStatus">
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status">
                         <option>Active</option>
                         <option>Inactive</option>
                     </select>
@@ -237,81 +230,69 @@
 
 
                 <div class="student-add-button">
-                    <button type="button" id="addStudentBtn">Add</button>
+                    <button type="button" id="addCourseBtn">Add Student</button>
                 </div>
 
             </form>
 
-            <p id="studentMessage"></p>
+            <p id="courseMessage"></p>
 
         </section>
 
     </main>
 
-<footer>
+    <footer>
+        <section>
 
-        <section class="upfooter">
+            <h3>SERENOVA</h3>
+        
+         <div class="c1">
 
-            <div>
+            <h4>EXPLORE</h4>
+            
+            <a href="#"> Courses</a>
+            <a href="#"> About Us</a>
+            <a href="#"> Contact</a>
 
-                <img src="svgs/logo-light.svg" alt="Serenova logo">
+         </div>
 
-                <p>
-                    <strong>
-                        SERENOVA
-                    </strong>
-                </p>
-            </div>
+         <div>
 
-            <div>
+            <h4 class="c2">STUDENTS</h4>
 
-                <h3>EXPLORE</h3>
+            <a href="#">Login</a>
+            <a href="#">Bookings</a>
+            <a href="#">My courses</a>
 
-                <a href="courses.html">Courses</a>
+         </div>
+        
+         <div class="c1">
 
-                <a href="index.html#contact">Contact</a>
+            <h4>TEACHERS</h4>
 
-            </div>
+            <a href="#"> Dashboard</a>
+            <a href="#"> Class Schedule</a>
 
-            <div>
+         </div>
 
-                <h3>STUDENTS</h3>
+         <div class="c2">
 
-                <a href="login.html">Login</a>
+            <h4>ADMIN</h4>
 
-                <a href="#">Bookings</a>
+            <a href="#">Dashboard</a>
+            <a href="#">Reports</a>
+         </div>
+        
+        </section> 
 
-                <a href="courses.html">My courses</a>
+        <div class="footer-bottom">
 
-            </div>
+            <p>  
+                &copy; 2026 Serenova Music School
+                Academic Project - CSE326
+            </p> 
 
-            <div>
-
-                <h3>TEACHERS</h3>
-
-                <a href="#">Dashboard</a>
-
-                <a href="#">Class Schedule</a>
-
-            </div>
-
-            <div>
-
-                <h3>ADMIN</h3>
-
-                <a href="#">Dashboard</a>
-
-                <a href="#">Reports</a>
-
-            </div>
-
-        </section>
-
-        <section class="lower_footer">
-
-            <p>&copy; 2026 Serenova Music School | Academic Project - CSE326</p>
-
-        </section>
+        </div>
 
     </footer>
 
