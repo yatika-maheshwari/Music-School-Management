@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Serenova Music School</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +14,46 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        /* Finishing touches. */
+
+        .c1:focus{
+            background-color: #f0eafb;
+            outline: none;
+            border: 2px outset #a29bfe;
+        }
+
+        .c1{
+            margin-top: 10px;
+        }
+
+        .hero{
+            background-image: url(svgs/hero.svg);
+            background-size: cover;
+            background-position: bottom;
+            padding: 1px 30px 30px 30px;
+            border: #a29bfe 2px inset;
+            border-radius: 100px 200px;
+            width: 100%;
+            margin: 30px auto;
+            color: #f0eafb
+        }
+
+        .hero h1{
+            font-size: 6.5rem;
+            color: #f0eafb;
+            text-align: justify;
+            cursor:pointer;
+
+        }
+
+        #about, #Roles, #Contact{
+            background-color: #f0eafb;
+            border: 1px solid #a29bfe;
+            border-radius: 50px;
+            padding: 20px;
+            margin: 30px auto;
+        }
+
 
     </style>
 
@@ -53,9 +92,11 @@
 
         <section class="hero">
 
-            <h1>Serenova Music School</h1>
+            <marquee behavior="slide" direction="left" scrollamount="15">
 
-            <!-- Replace hero.svg with your own image -->
+                <h1>Serenova Music School</h1>
+
+            </marquee>
 
             <p>
                 
@@ -67,7 +108,7 @@
 
             <a href="login.html" class="btn">Login</a>
 
-            <a href="register.html" class="btn">Get started</a>
+            <a href="register.html" class="btn">Register Now</a>
 
         </section>
 
@@ -75,7 +116,7 @@
 
         <section id="courses">
 
-            <h2> Explore Your Courses </h2>
+            <h2>Explore Your Courses</h2>
 
             <div class="cards">
 
@@ -132,11 +173,11 @@
             </div>
             <!-- Search the courses -->
 
-                <form action="courses.html">
+            <form action="courses.html">
 
-                <label for="search">Browse All courses</label>
+                <label for="search" style="text-align: center">~Browse All courses~</label>
 
-                <input type="search" id="search" placeholder="What are you into?">
+                <input type="search" id="search" placeholder="What are you into?!" class = "c1">
 
                 <button type="submit">Search</button>
 
@@ -169,7 +210,7 @@
 
         <article>
             
-            <h3>Administrator</h3>
+            <h3 style="font-weight: bolder;">Administrator</h3>
 
             <p>Responsible for managing the academy, including students, teachers, courses, schedules and overall operations.</p>
 
@@ -177,15 +218,15 @@
 
         <article>
 
-            <h3> Teachers </h3>
+            <h3 style="font-weight: bolder;"> Teachers </h3>
 
-                <p> See your Students, approve or reject class requests, and mark classes completed.</p>
+            <p> See your Students, approve or reject class requests, and mark classes completed.</p>
 
         </article>
 
         <article>
 
-            <h3>Students</h3>
+            <h3 style="font-weight: bolder;">Students</h3>
             
             <p> Can explore courses, enroll in classes, view schedules and access personal learning information. </p>  
 
@@ -195,7 +236,7 @@
 
     </section>
 
-    <section id=""Contact>
+    <section id="Contact">
 
         <h2>Contact</h2>
 
@@ -229,7 +270,11 @@
                 <a href="https://sprunkiretake.net" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">Sprunki</a>
             </div>
 
-            <style>.embed-map-fixed{position:relative;text-align:right;width:600px;height:400px;}.embed-map-container{overflow:hidden;background:none!important;width:600px;height:400px;}.embed-map-frame{width:600px!important;height:400px!important;}</style>
+            <style>
+            .embed-map-fixed{position:relative;text-align:right;width:600px;height:400px;}
+            .embed-map-container{overflow:hidden;background:none!important;width:600px;height:400px;}
+            .embed-map-frame{width:600px!important;height:400px!important;}
+            </style>
 
         </div>
 
@@ -261,9 +306,9 @@
 
                 <h3>EXPLORE</h3>
 
-                <a href="courses.html">Courses</a>
+                <a href="courses.html" style="text-decoration: none;">Courses</a>
 
-                <a href="index.html">Contact</a>
+                <a href="index.html" style="text-decoration: none;">Contact</a>
 
             </div>
 
@@ -271,11 +316,11 @@
 
                 <h3>STUDENTS</h3>
 
-                <a href="login.html">Login</a>
+                <a href="login.html" style="text-decoration: none;">Login</a>
 
-                <a href="Bookings.html">Bookings</a>
+                <a href="Bookings.html" style="text-decoration: none;">Bookings</a>
 
-                <a href="courses.html">My courses</a>
+                <a href="courses.html" style="text-decoration: none;">My courses</a>
 
             </div>
 
@@ -283,17 +328,17 @@
 
                 <h3>TEACHERS</h3>
 
-                <a href="Dashboard.html">Dashboard</a>
+                <a href="Dashboard.html" style="text-decoration: none;" >Dashboard</a>
 
-                <a href="schedule.html">Class Schedule</a>
+                <a href="schedule.html" style="text-decoration: none;">Class Schedule</a>
 
             </div>
 
-            <div>
+            <div >
 
                 <h3>ADMIN</h3>
 
-                <a href="Dashboard.html">Dashboard</a>
+                <a href="Dashboard.html" style="text-decoration: none;">Dashboard</a>
 
                 <a href="Reports.html">Reports</a>
 
