@@ -1,0 +1,435 @@
+/* Basics*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #faf7ff;
+    color: #2b2b3a;
+    font-family: 'Tsukimi Rounded', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: #4b2e83;
+}
+
+button, input, select, textarea {
+    font-family: 'Tsukimi Rounded', Arial, sans-serif;
+}
+
+
+/* Headings */
+h1 {
+    font-family: 'Praise', cursive;
+    font-size: 4.5rem;
+    font-weight: normal;
+    color: #4b2e83;
+    text-align: center;
+    margin: 10px 0;
+}
+
+h2 {
+    font-family: 'Srisakdi', cursive;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #4b2e83;
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #c9a227;
+}
+
+h3 {
+    font-family: 'Srisakdi', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #4b2e83;
+}
+
+
+/* Header and Navigation */
+header {
+    background-color: #4b2e83;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-bottom: 3px solid #c9a227;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header img {
+    height: 70px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    color: #faf7ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    background-color: #1e1433;
+    border-bottom-color: #c9a227;
+}
+
+
+/* Buttons */
+button {
+    display: inline-block;
+    background-color: #4b2e83;
+    color: #faf7ff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c9a227;
+    color: #1e1433;
+}
+
+td button {
+    padding: 6px 12px;
+    margin: 2px;
+    font-size: 0.9rem;
+}
+
+
+main > section:first-child {
+    background-color: #4b2e83;
+    color: #faf7ff;
+    text-align: center;
+    border: 3px solid #c9a227;
+    border-radius: 30px;
+    padding: 20px 30px 30px 30px;
+    margin: 20px 0;
+}
+
+main > section:first-child h1 {
+    color: #f0eafb;
+}
+
+main > section:first-child p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+main > section:first-child button {
+    background-color: #c9a227;
+    color: #1e1433;
+}
+
+main > section:first-child button:hover {
+    background-color: #faf7ff;
+    color: #4b2e83;
+}
+
+
+/*Forms*/
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 15px;
+    background-color: #ffffff;
+    border: 1px solid #d9ccff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+form div {
+    flex: 1 1 220px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    color: #4b2e83;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    color: #2b2b3a;
+    background-color: #ffffff;
+    border: 2px solid #d9ccff;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: #f0eafb;
+    border-color: #a29bfe;
+    outline: none;
+}
+
+/* message under the Book Class button */
+#bookMessage {
+    flex: 1 1 100%;
+    margin: 0;
+    text-align: center;
+    color: #4b2e83;
+    font-weight: 700;
+}
+
+
+/* Tables */
+table {
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+}
+
+caption {
+    font-family: 'Srisakdi', cursive;
+    font-size: 1.3rem;
+    color: #4b2e83;
+    padding: 10px;
+}
+
+th, td {
+    border: none;
+    border-bottom: 1px solid #e6dcff;
+    padding: 15px 12px;
+    text-align: center;
+}
+
+thead th {
+    background-color: #4b2e83;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0eafb;
+}
+
+tbody tr:hover {
+    background-color: #e6dcff;
+}
+
+tfoot th,
+tfoot td {
+    background-color: #efe8ff;
+    color: #4b2e83;
+    font-weight: 700;
+    border-top: 2px solid #c9a227;
+}
+
+
+.pending,
+.approved,
+.rejected,
+.completed,
+.cancelled {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 2px 14px;
+}
+
+.pending {
+    background-color: #fff3cd;
+    color: #8a6d00;
+}
+
+.approved {
+    background-color: #dff3e4;
+    color: #1d6b34;
+}
+
+.rejected {
+    background-color: #fde2e2;
+    color: #9b2c2c;
+}
+
+.completed {
+    background-color: #dbe9ff;
+    color: #1f4e9c;
+}
+
+.cancelled {
+    background-color: #e8e8ee;
+    color: #555566;
+}
+
+
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main li {
+    background-color: #f0eafb;
+    border-left: 4px solid #c9a227;
+    border-radius: 6px;
+    padding: 8px 14px;
+    margin-bottom: 8px;
+}
+
+#studentView,
+#teacherView,
+#adminView {
+    background-color: #ffffff;
+    border: 1px solid #d9ccff;
+    border-radius: 8px;
+    padding: 10px 25px 25px 25px;
+    margin: 30px 0;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.stats h3 {
+    flex: 1 1 100%;
+    margin: 10px 0 0 0;
+}
+
+article {
+    flex: 1 1 150px;
+    background-color: #faf7ff;
+    border: 1px solid #d9ccff;
+    border-top: 4px solid #c9a227;
+    border-radius: 8px;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+article:hover {
+    background-color: #f0eafb;
+    border-color: #a29bfe;
+}
+
+article h4 {
+    margin: 5px 0;
+    color: #4b2e83;
+    font-weight: 500;
+}
+
+article p {
+    margin: 0;
+    font-family: 'Srisakdi', cursive;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #4b2e83;
+}
+
+section > p {
+    text-align: center;
+}
+
+
+/*Reports*/
+.pending-bar,
+.approved-bar,
+.rejected-bar,
+.completed-bar,
+.cancelled-bar,
+.course-bar {
+    display: inline-block;
+    height: 16px;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+.pending-bar   { width: 100px; background-color: #f4b942; }
+.approved-bar  { width: 175px; background-color: #4caf70; }
+.rejected-bar  { width: 50px;  background-color: #d9534f; }
+.completed-bar { width: 125px; background-color: #4a7fd4; }
+.cancelled-bar { width: 25px;  background-color: #9a9aaa; }
+
+.course-bar { background-color: #a29bfe; }
+
+tr:nth-child(1) .course-bar { width: 125px; }   /* Guitar  5 */
+tr:nth-child(2) .course-bar { width: 125px; }   /* Piano   5 */
+tr:nth-child(3) .course-bar { width: 75px; }    /* Violin  3 */
+tr:nth-child(4) .course-bar { width: 50px; }    /* Drums   2 */
+tr:nth-child(5) .course-bar { width: 75px; }    /* Vocals  3 */
+tr:nth-child(6) .course-bar { width: 25px; }    /* Keyboard 1 */
+
+
+footer {
+    background-color: #1e1433;
+    color: #faf7ff;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.upfooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+footer h3 {
+    color: #c9a227;
+    font-family: 'Tsukimi Rounded', Arial, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+}
+
+footer img {
+    height: 50px;
+    width: auto;
+}
+
+footer a {
+    display: block;
+    color: #d9ccff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #c9a227;
+    text-decoration: underline;
+}
+
+.lower_footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #4b2e83;
+}
