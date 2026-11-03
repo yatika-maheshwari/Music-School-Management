@@ -1,0 +1,273 @@
+Bookings: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | Serenova Music School</title>
+</head>
+<body>
+
+    <header> 
+        <img src="svgs/logo-light.svg" alt="Serenova Music School logo"> 
+
+        <nav>  
+            
+            <a href="index.html" id = "Home"> Home</a>
+
+            <a href="courses.html" class="course">Courses</a>
+
+            <a href="teachers.html">Teachers</a>
+            
+            <a href="students.html">Students</a>
+
+            <a href="Bookings.html">Bookings</a>
+
+            <a href="Dashboard.html">Dashboard</a>
+            
+            <a href="login.html">Login</a>
+
+        </nav>
+
+    </header>
+
+<main>
+
+    <section>
+        <h1>Bookings</h1>
+        <p>Book a class and follow its status.</p>
+    </section>
+
+    <section>
+        <h2>Book a Class</h2>
+
+        <form>
+            <div>
+                <label for="bookCourse">Choose a Course:</label>
+                <select id="bookCourse" name="course" required>
+                    <option value="">Select a course</option>
+                    <option value="guitar">Guitar</option>
+                    <option value="piano">Piano</option>
+                    <option value="violin">Violin</option>
+                    <option value="drums">Drums</option>
+                    <option value="vocals">Vocals</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="bookDate">Choose Date:</label>
+                <input type="date" id="bookDate" name="date" required>
+            </div>
+
+            <div>
+                <label for="bookTime">Choose Time:</label>
+                <select id="bookTime" name="time" required>
+                    <option value="">Select a time</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="16:00">04:00 PM</option>
+                    <option value="18:00">06:00 PM</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="bookNotes">Notes (Optional):</label>
+                <textarea id="bookNotes" name="notes" rows="3"></textarea>
+            </div>
+
+            <button type="button" id="bookBtn">Book Class</button>
+
+            <p id="bookMessage"></p>
+        </form>
+    </section>
+
+    <section>
+        <h2>Your Bookings</h2>
+
+        <form>
+            <div>
+                <label for="bookSearch">Search Course:</label>
+                <input type="search" id="bookSearch" name="search" placeholder="Search course">
+            </div>
+
+            <div>
+                <label for="statusFilter">Filter by Status:</label>
+                <select id="statusFilter" name="status">
+                    <option value="all">All</option>
+                    <option value="pending">Pending</option>
+                    <option value="approved">Approved</option>
+                    <option value="rejected">Rejected</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+
+            <button type="button" id="filterBtn">Search</button>
+        </form>
+
+        <table border="1">
+            <caption>All bookings</caption>
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Student</th>
+                    <th>Course</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="bookingBody">
+                <tr>
+                    <td>1</td>
+                    <td>Aarav Singh</td>
+                    <td>Guitar</td>
+                    <td>05-11-2026</td>
+                    <td>10:00 AM</td>
+                    <td><span class="pending">Pending</span></td>
+                    <td>
+                        <button type="button">Approve</button>
+                        <button type="button">Reject</button>
+                        <button type="button">Completed</button>
+                        <button type="button">Cancel</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Diya Sharma</td>
+                    <td>Piano</td>
+                    <td>06-11-2026</td>
+                    <td>11:00 AM</td>
+                    <td><span class="approved">Approved</span></td>
+                    <td>
+                        <button type="button">Approve</button>
+                        <button type="button">Reject</button>
+                        <button type="button">Completed</button>
+                        <button type="button">Cancel</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Isha Gupta</td>
+                    <td>Violin</td>
+                    <td>07-11-2026</td>
+                    <td>02:00 PM</td>
+                    <td><span class="rejected">Rejected</span></td>
+                    <td>
+                        <button type="button">Approve</button>
+                        <button type="button">Reject</button>
+                        <button type="button">Completed</button>
+                        <button type="button">Cancel</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Rohan Das</td>
+                    <td>Vocals</td>
+                    <td>01-11-2026</td>
+                    <td>04:00 PM</td>
+                    <td><span class="completed">Completed</span></td>
+                    <td>
+                        <button type="button">Approve</button>
+                        <button type="button">Reject</button>
+                        <button type="button">Completed</button>
+                        <button type="button">Cancel</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Meera Nair</td>
+                    <td>Piano</td>
+                    <td>08-11-2026</td>
+                    <td>06:00 PM</td>
+                    <td><span class="cancelled">Cancelled</span></td>
+                    <td>
+                        <button type="button">Approve</button>
+                        <button type="button">Reject</button>
+                        <button type="button">Completed</button>
+                        <button type="button">Cancel</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+
+        <section class="upfooter">
+
+            <div>
+
+                <img src="svgs/logo-light.svg" alt="Serenova logo">
+
+                <p>
+                    <strong>
+                        SERENOVA
+                    </strong>
+                </p>
+            </div>
+
+            <div>
+
+                <h3>EXPLORE</h3>
+
+                <a href="courses.html">Courses</a>
+
+                <a href="index.html">Contact</a>
+
+            </div>
+
+            <div>
+
+                <h3>STUDENTS</h3>
+
+                <a href="login.html">Login</a>
+
+                <a href="Bookings.html">Bookings</a>
+
+                <a href="courses.html">My courses</a>
+
+            </div>
+
+            <div>
+
+                <h3>TEACHERS</h3>
+
+                <a href="Dashboard.html">Dashboard</a>
+
+                <a href="schedule.html">Class Schedule</a>
+
+            </div>
+
+            <div>
+
+                <h3>ADMIN</h3>
+
+                <a href="Dashboard.html">Dashboard</a>
+
+                <a href="Reports.html">Reports</a>
+
+            </div>
+
+        </section>
+
+        <section class="lower_footer">
+
+            <p>&copy; 2026 Serenova Music School | Academic Project - CSE326</p>
+
+        </section>
+
+    </footer>
+
+</body>
+</html>
