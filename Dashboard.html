@@ -1,0 +1,362 @@
+dashboard: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Serenova Music School</title>
+</head>
+<body>
+
+    <header> 
+        <img src="svgs/logo-light.svg" alt="Serenova Music School logo"> 
+
+        <nav>  
+            
+            <a href="index.html" id = "Home"> Home</a>
+
+            <a href="courses.html" class="course">Courses</a>
+
+            <a href="teachers.html">Teachers</a>
+            
+            <a href="students.html">Students</a>
+
+            <a href="Bookings.html">Bookings</a>
+
+            <a href="Dashboard.html">Dashboard</a>
+            
+            <a href="login.html">Login</a>
+
+        </nav>
+
+    </header>
+
+<main>
+
+    <section>
+
+        <h1 id="dashWelcome">Welcome, Aarav</h1>
+        <p id="dashRole">You are logged in as: Student</p>
+        <p id="dashDate">Monday, 2 November 2026</p>
+
+    </section>
+
+    <!-- Student dashboard -->
+    <section id="studentView">
+        <h2>Student Dashboard</h2>
+
+        <section>
+            <h3>My Booking Overview</h3>
+
+            <article>
+                <h4>Total Bookings</h4>
+                <p id="totalCount">5</p>
+            </article>
+
+            <article>
+                <h4>Pending</h4>
+                <p id="pendingCount">1</p>
+            </article>
+
+            <article>
+                <h4>Approved</h4>
+                <p id="approveCount">1</p>
+            </article>
+
+            <article>
+                <h4>Rejected</h4>
+                <p id="rejectedCount">1</p>
+            </article>
+
+            <article>
+                <h4>Completed</h4>
+                <p id="completedCount">1</p>
+            </article>
+
+            <article>
+                <h4>Cancelled</h4>
+                <p id="cancelledCount">1</p>
+            </article>
+        </section>
+
+        <section>
+            <h3>Next Class</h3>
+            <p><strong>Piano</strong> on 06-11-2026 at 11:00 AM (Approved)</p>
+        </section>
+
+        <section>
+            <h3>Recent Messages</h3>
+
+            <ul id="messageList">
+                <li>Booking #1 was sent. Status: Pending</li>
+                <li>Booking #2 was approved</li>
+                <li>Booking #3 was rejected</li>
+                <li>Booking #4 was marked completed</li>
+                <li>Booking #5 was cancelled</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Quick Links</h3>
+
+            <ul id="quickLinks">
+                <li><a href="bookings.html">Book a Class</a></li>
+                <li><a href="courses.html">See Courses</a></li>
+
+            </ul>
+        </section>
+    </section>
+
+    <!-- Teacher's Dashboard -->
+    <section id="teacherView">
+        <h2>Teacher Dashboard</h2>
+
+        <section>
+            <h3>Overview</h3>
+
+            <article>
+                <h4>Pending Requests</h4>
+                <p id="teacherPending">2</p>
+            </article>
+
+            <article>
+                <h4>Classes This Week</h4>
+                <p id="teacherClasses">6</p>
+            </article>
+
+            <article>
+                <h4>My Students</h4>
+                <p id="teacherStudents">4</p>
+            </article>
+        </section>
+
+        <section>
+            <h3>Class Requests</h3>
+
+            <table border="1" cellpadding="3">
+                <p>Requests waiting for your decision</p>
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Student</th>
+                        <th>Course</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="requestBody">
+                    <tr>
+                        <td>1</td>
+                        <td>Aarav Singh</td>
+                        <td>Guitar</td>
+                        <td>05-11-2026</td>
+                        <td>10:00 AM</td>
+                        <td>
+                            <button type="button">Approve</button>
+                            <button type="button">Reject</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Kabir Malhotra</td>
+                        <td>Piano</td>
+                        <td>09-11-2026</td>
+                        <td>12:00 PM</td>
+                        <td>
+                            <button type="button">Approve</button>
+                            <button type="button">Reject</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="schedule.html">My Class Schedule</a></li>
+                <li><a href="students.html">My Students</a></li>
+            </ul>
+
+        </section>
+
+    </section>
+
+    <!-- Admin Dashboard -->
+    <section id="adminView">
+        
+        <h2>Administrator Dashboard</h2>
+
+        <section>
+
+            <h3>Overview</h3>
+
+            <article>
+                <h4>Students</h4>
+                <p id="adminStudents">25</p>
+            </article>
+
+            <article>
+                <h4>Teachers</h4>
+                <p id="adminTeachers">5</p>
+            </article>
+
+            <article>
+                <h4>Courses</h4>
+                <p id="adminCourses">6</p>
+            </article>
+
+            <article>
+                <h4>Total Bookings</h4>
+                <p id="adminBookings">19</p>
+            </article>
+
+        </section>
+
+        <section>
+
+            <h3>Manage Records</h3>
+
+            <ul>
+                <li><a href="students.html">Manage Students</a></li>
+                <li><a href="teachers.html">Manage Teachers</a></li>
+                <li><a href="courses.html">Manage Courses</a></li>
+            </ul>
+
+        </section>
+
+        <section>
+
+            <h3>Latest Bookings</h3>
+
+            <table border="1" cellpadding="3">
+                <p>Three most recent bookings</p>
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Student</th>
+                        <th>Course</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Aarav Singh</td>
+                        <td>Guitar</td>
+                        <td>05-11-2026</td>
+                        <td>Pending</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Diya Sharma</td>
+                        <td>Piano</td>
+                        <td>06-11-2026</td>
+                        <td>Approved</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Isha Gupta</td>
+                        <td>Violin</td>
+                        <td>07-11-2026</td>
+                        <td>Rejected</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="reports.html">View Reports</a></li>
+                <li><a href="bookings.html">All Bookings</a></li>
+            </ul>
+
+        </section>
+
+    </section>
+
+</main>
+
+<footer>
+
+        <section class="upfooter">
+
+            <div>
+
+                <img src="svgs/logo-light.svg" alt="Serenova logo">
+
+                <p>
+                    <strong>
+                        SERENOVA
+                    </strong>
+                </p>
+            </div>
+
+            <div>
+
+                <h3>EXPLORE</h3>
+
+                <a href="courses.html">Courses</a>
+
+                <a href="index.html">Contact</a>
+
+            </div>
+
+            <div>
+
+                <h3>STUDENTS</h3>
+
+                <a href="login.html">Login</a>
+
+                <a href="Bookings.html">Bookings</a>
+
+                <a href="courses.html">My courses</a>
+
+            </div>
+
+            <div>
+
+                <h3>TEACHERS</h3>
+
+                <a href="Dashboard.html">Dashboard</a>
+
+                <a href="schedule.html">Class Schedule</a>
+
+            </div>
+
+            <div>
+
+                <h3>ADMIN</h3>
+
+                <a href="Dashboard.html">Dashboard</a>
+
+                <a href="reports.html">Reports</a>
+
+            </div>
+
+        </section>
+
+        <section class="lower_footer">
+
+            <p>&copy; 2026 Serenova Music School | Academic Project - CSE326</p>
+
+        </section>
+
+    </footer>
+
+</body>
+</html>
