@@ -5,29 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
 </head>
+
 <body>
 <!-- Navigation Area! -->
 
-    <header> Serenova Music School    
-        <nav> Menu <!-- Sidebar area  -->
-        
+    <header> <img src="svgs/logo-full.svg" alt="Serenova Music School logo">   
+        <nav>  
+
             <a href="#" id = "Home"> Home</a>
-            <a href="#" class="course">Courses</a>
-            <a href="#">Teachers</a>
+            <a href="courses.html" class="course">Courses</a>
+            <a href="teachers.html">Teachers</a>
             <a href="#">Contact</a>
             <a href="login.html">Login</a>
+
         </nav>
+
     </header>
 
 <main>    
+
 <!-- Welcome part - (w image/video) -->
+
     <section>
 
         <h1> 
             <marquee behavior="slide" direction = "left" scrollamount="200"> "Serenova Music School"</marquee> 
         </h1>
+
         <img src="" alt="Serenova Music School">
+
         <small>Where every note meets its soul.</small>
 
         <a href="login.html">
@@ -38,65 +48,68 @@
             <button>Get started</button>
         </a>
 
-        <p> From your first chord to your first stage, learn with friendly expert teachers in small, welcoming classes.</p>        
+        <p> From your first chord to your first stage, learn with friendly expert teachers in small, welcoming classes.</p>   
+
     </section>
 
 <!-- Exploring [Instruments] -->
 
-    <section id="Course" value="courses">
+    <section id="Course">
 
         <!-- 2. Search for interest -->
             <h2>Explore Your Courses</h2>
 
-            <article>
+            <article class="card">
                 <h3>Guitar Basics</h3>
 
-                <img src="" alt="Guitar">
+                <img src="svgs/guitar.svg" alt="Guitar">
 
                 <div>Learn chords, strumming patterns and techniques to bring your favourite melodies to life.</div>
 
             </article>
 
-            <article>
+            <article class="card">
                 <h3>Piano Foundations</h3>
 
-                <img src="" alt="Piano">
+                <img src="svgs/piano.svg" alt="Piano">
 
                 <div>Build a strong musical foundation through keyboard techniques, melodies and music theory.</div>
+
             </article>
 
-            <article> 
+            <article class="card"> 
                 <h3>Violin Melodies</h3>
 
-                <img src="" alt="Violin">
+                <img src="svgs/violin.svg" alt="Violin">
 
-                <div></div>
+                <div> </div>
 
             </article>
 
-            <article> 
+            <article class="card"> 
                 <h3>Drums Rhythms</h3>
 
-                <img src="" alt="Drums">
+                <img src="svgs/drums.svg" alt="Drums">
 
                 <div>Develop your sense of rhythm, timing and coordination through practical sessions.</div>
                 
             </article>
 
-            <article> 
+            <article class="card"> 
                 <h3>Vocal Training</h3>
 
-                <img src="" alt="Vocal">
+                <img src="svgs/vocals.svg" alt="Vocal">
 
                 <div>Explore your voice, improve pitch and build confidence through guided singing lessons.</div>
+
             </article>
 
             <!-- Courses -->
 
                 <input type="search" placeholder="What are you into?!" id="search">
 
-                <a href="#">
-                    <button>Browse all programs</button>
+                <a href="courses.html">
+                    <button> Browse all programs </button>
                 </a>                    
     </section>
 
@@ -151,6 +164,7 @@
     </section>
 
     <section>
+
         <h2>Contact</h2>
 
         <p>Have questions about our courses, schedules or enrollment process? We'd love to hear from you.</p>
@@ -171,27 +185,32 @@
 <hr>
 
     <footer>
-        <section>
 
-            <h3>SERENOVA</h3>
+        <section class="upfooter">
+
+            <div>
+                <img src="svgs/logo-mark.svg" alt="logo" width="50px">
+                <h3>SERENOVA</h3>
+            </div>
         
-         <div class="c1">
+         
+            <div class="c1">
 
-            <h4>EXPLORE</h4>
+                <h4>EXPLORE</h4>
             
-            <a href="#"> Courses</a>
-            <a href="#"> About Us</a>
-            <a href="#"> Contact</a>
+                <a href="courses.html"> Courses</a>
+                <a href="#"> About Us</a>
+                <a href="#"> Contact</a>
 
-         </div>
+            </div>
 
          <div>
 
             <h4 class="c2">STUDENTS</h4>
 
-            <a href="#">Login</a>
+            <a href="login.html">Login</a>
             <a href="#">Bookings</a>
-            <a href="#">My courses</a>
+            <a href="courses.html">My courses</a>
 
          </div>
         
@@ -214,7 +233,7 @@
         
         </section> 
 
-        <div class="footer-bottom">
+            <div class="footer-bottom">
 
             <p>  
                 &copy; 2026 Serenova Music School
