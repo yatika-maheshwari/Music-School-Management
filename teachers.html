@@ -1,201 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teachers</title>
     <link rel="stylesheet" href="project.css">
 </head>
+
 <body>
-    <header> 
-        <img src="svgs/logo-light.svg" alt="Serenova Music School logo"> 
 
-        <nav>  
-            
-            <a href="index.html" id = "Home"> Home</a>
+    <!-- NAV AREA -->
+    <header>
+        <img src="svgs/logo-light.svg" alt="Serenova Music School logo">
 
+        <nav>
+            <a href="index.html" id="Home">Home</a>
             <a href="courses.html" class="course">Courses</a>
-
             <a href="teachers.html">Teachers</a>
-            
             <a href="students.html">Students</a>
-
             <a href="Bookings.html">Bookings</a>
-
             <a href="Dashboard.html">Dashboard</a>
-            
             <a href="login.html">Login</a>
-
         </nav>
-
     </header>
+
 
     <main class="teachers-container">
 
-         <!-- PAGE HEADING -->
+        <!-- PAGE HEADING -->
         <section class="page-heading">
-            <h1>
-                Teachers
-            </h1>
+            <h1>Teachers</h1>
             <p>Meet our music teachers.</p>
         </section>
 
+
         <!-- SEARCH AND FILTER -->
-         <section class="search-section">
+        <section class="search-section">
 
             <h2>Find Your Teacher</h2>
 
-            <form class="search-form">
+            <!-- CHANGED: Added unique form ID -->
+            <form class="search-form" id="teacherSearchForm">
+
                 <input type="search" id="teacherSearch"
                     placeholder="Search by name">
 
                 <select name="instrument" id="instrumentFilter">
-                    <option value="Instruments">Instruments</option>
-                    <option value="guitar">Guitar</option>
-                    <option value="piano">Piano</option>
-                    <option value="violin">Violin</option>
-                    <option value="drums">Drums</option>
-                    <option value="vocals">Vocals</option>
+                    <option value="">Instruments</option>
+                    <option value="Guitar">Guitar</option>
+                    <option value="Piano">Piano</option>
+                    <option value="Violin">Violin</option>
+                    <option value="Drums">Drums</option>
+                    <option value="Vocals">Vocals</option>
                 </select>
 
                 <select name="status" id="status">
-                    <option value="Status">Status</option>
-                    <option value="active">Active</option>
-                    <option value="inactive">Inactive</option>
+                    <option value="">Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
                 </select>
 
                 <button type="button" id="searchBtn">Search</button>
-            </form>
-         </section>
 
-         <!-- TEACHERS TABLE -->
-          <section class="table-section">
+            </form>
+
+        </section>
+
+
+        <!-- TEACHERS TABLE -->
+        <section class="table-section">
+
             <h2>Available Teachers</h2>
 
             <div class="table-wrapper">
-                <table border="1">
-            <thead class="table-head">
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Instrument</th>
-                    <th>Experience</th>
-                    <th>Phone</th>
-                    <th>Status</th>
-                </tr>
-        </thead>
 
-        <tbody>
+                <!-- CHANGED: Removed border="1" -->
+                <table>
 
-        </tbody>
+                    <thead class="table-head">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Instrument</th>
+                            <th>Experience</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
 
-        <tr>
-            <td>1</td>
+                    <!-- CHANGED: All rows moved inside tbody -->
+                    <tbody id="teacherBody">
 
-            <td>Aman Verma</td>
+                        <tr>
+                            <td>1</td>
+                            <td>Aman Verma</td>
+                            <td>Guitar</td>
+                            <td>6 years</td>
+                            <td>9876500001</td>
+                            <td>Active</td>
+                        </tr>
 
-            <td>Guitar</td>
+                        <tr class="row2">
+                            <td>2</td>
+                            <td>Neha Kapoor</td>
+                            <td>Piano</td>
+                            <td>8 years</td>
+                            <td>9876500002</td>
+                            <td>Active</td>
+                        </tr>
 
-            <td>6 years</td>
+                        <tr>
+                            <td>3</td>
+                            <td>Riya Sen</td>
+                            <td>Violin</td>
+                            <td>5 years</td>
+                            <td>9876500003</td>
+                            <td>Active</td>
+                        </tr>
 
-            <td>9876500001</td>
+                        <tr class="row4">
+                            <td>4</td>
+                            <td>Karan Mehta</td>
+                            <td>Drums</td>
+                            <td>4 years</td>
+                            <td>9876500004</td>
+                            <td>Inactive</td>
+                        </tr>
 
-            <td>Active</td>
-        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Simran Kaur</td>
+                            <td>Vocals</td>
+                            <td>7 years</td>
+                            <td>9876500005</td>
+                            <td>Active</td>
+                        </tr>
 
-            <tr class="row2">
-                <td>
-                    2
-                </td>
-                <td>
-                    Neha Kapoor
-                </td>
-                <td>
-                    Piano
-                </td>
-                <td>
-                    8 years
-                </td>
-                <td>
-                    9876500002
-                </td>
-                <td>
-                    Active
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    3
-                </td>
-                <td>
-                    Riya Sen
-                </td>
-                <td>
-                    Violin
-                </td>
-                <td>
-                    5 years
-                </td>
-                <td>
-                    9876500003
-                </td>
-                <td>
-                    Active
-                </td>
-            </tr>
-            <tr class="row4">
-                <td>
-                    4
-                </td>
-                <td>
-                    Karan Mehta
-                </td>
-                <td>
-                   Drums 
-                </td>
-                <td>
-                    4 years
-                </td>
-                <td>
-                    9876500004
-                </td>
-                <td>
-                    Inactive
-                </td>
-                <tr>
-                    <td>
-                        5
-                    </td>
-                    <td>
-                   Simran Kaur 
-                </td>
-                <td>
-                    Vocals
-                </td>
-                <td>
-                    7 years
-                </td>
-                <td>
-                    9876500005
-                </td>
-                <td>
-                    Active
-                </td>
-                </tr>
-        </table>
+                    </tbody>
+
+                </table>
 
             </div>
-          </section>
-         
-            <!-- Later for Java -->
-            <p></p>
 
-            <!-- ADD TEACHER FORM -->
+        </section>
+
+
+        <!-- ADD TEACHER FORM -->
         <section class="add-section">
 
             <h2>Add a New Teacher</h2>
 
-            <form class="add-form">
+            <!-- CHANGED: Added unique form ID -->
+            <form class="add-form" id="addTeacherForm">
 
                 <div class="form-group">
                     <label for="teacherName">Teacher Name</label>
@@ -204,13 +161,14 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="instrumentFilter">Instrument</label>
-                    <select id="instrumentFilter">
-                        <option>Guitar</option>
-                        <option>Piano</option>
-                        <option>Violin</option>
-                        <option>Drums</option>
-                        <option>Vocals</option>
+                    <!-- CHANGED: Unique instrument ID -->
+                    <label for="teacherInstrument">Instrument</label>
+                    <select id="teacherInstrument">
+                        <option value="Guitar">Guitar</option>
+                        <option value="Piano">Piano</option>
+                        <option value="Violin">Violin</option>
+                        <option value="Drums">Drums</option>
+                        <option value="Vocals">Vocals</option>
                     </select>
                 </div>
 
@@ -228,96 +186,74 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="Status">Status</label>
-                    <select id="Status">
-                        <option>Active</option>
-                        <option>Inactive</option>
+                    <!-- CHANGED: Unique status ID -->
+                    <label for="teacherStatus">Status</label>
+                    <select id="teacherStatus">
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
                     </select>
                 </div>
 
                 <div class="teacher-add-button">
-                    <button type="button" id="addCourseBtn">Add Teacher</button>
+                    <!-- CHANGED: Corrected button ID and type -->
+                    <button type="submit" id="addTeacherBtn">Add Teacher</button>
                 </div>
 
             </form>
 
-            <p id="courseMessage"></p>
+            <!-- CHANGED: Corrected message ID -->
+            <p id="teacherMessage"></p>
 
         </section>
 
     </main>
 
-        <!-- Footer -->
 
+    <!-- FOOTER -->
     <footer>
 
         <section class="upfooter">
 
             <div>
-
                 <img src="svgs/logo-light.svg" alt="Serenova logo">
 
                 <p>
-
-                    <strong>
-                        SERENOVA
-                    </strong>
-
+                    <strong>SERENOVA</strong>
                 </p>
-
             </div>
 
             <div>
-
                 <h3>EXPLORE</h3>
-
                 <a href="courses.html">Courses</a>
-
                 <a href="index.html#contact">Contact</a>
-
             </div>
 
             <div>
-
                 <h3>STUDENTS</h3>
-
                 <a href="login.html">Login</a>
-
                 <a href="Bookings.html">Bookings</a>
-
                 <a href="courses.html">My courses</a>
-
             </div>
 
             <div>
-
                 <h3>TEACHERS</h3>
-
                 <a href="Dashboard.html">Dashboard</a>
-
                 <a href="schedule.html">Class Schedule</a>
-
             </div>
 
             <div>
-
                 <h3>ADMIN</h3>
-
                 <a href="Dashboard.html">Dashboard</a>
-
                 <a href="Reports.html">Reports</a>
-
             </div>
 
         </section>
 
         <section class="lower_footer">
-
             <p>&copy; 2026 Serenova Music School | Academic Project - CSE326</p>
-
         </section>
 
     </footer>
-    
+
 </body>
 </html>
