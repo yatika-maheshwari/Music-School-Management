@@ -1,8 +1,32 @@
 
+// Set minimum date to today
+
+var today = new Date();
+
+var year = today.getFullYear();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+
+if(month < 10)
+{
+    month = "0" + month;
+}
+
+if(day < 10)
+{
+    day = "0" + day;
+}
+
+var todayDate = year + "-" + month + "-" + day;
+
+document.getElementById("bookDate").min = todayDate;
+
+
 // Function to book a new class
 
 document.getElementById("bookBtn").onclick = function()
 {
+    var student = document.getElementById("bookStudent").value;
     var course = document.getElementById("bookCourse").value;
     var date = document.getElementById("bookDate").value;
     var time = document.getElementById("bookTime").value;
@@ -10,9 +34,15 @@ document.getElementById("bookBtn").onclick = function()
 
     var message = document.getElementById("bookMessage");
 
-    if(course == "" || date == "" || time == "")
+    if(student == "" || course == "" || date == "" || time == "")
     {
         message.innerHTML = "Please fill all required fields!";
+        message.style.color = "red";
+    }
+
+    else if(date < todayDate)
+    {
+        message.innerHTML = "Please select a future date!";
         message.style.color = "red";
     }
 
@@ -24,24 +54,44 @@ document.getElementById("bookBtn").onclick = function()
 
         var count = table.rows.length;
 
-        var student = "Aarav Singh";
+        // Change date format
+
+        var newDate = date.split("-");
+
+        var finalDate = newDate[2] + "-" + newDate[1] + "-" + newDate[0];
+
+        // Get selected time text
+
+        var timeList = document.getElementById("bookTime");
+
+        var finalTime = timeList.options[timeList.selectedIndex].text;
+
+        // Add booking details to table
 
         row.insertCell(0).innerHTML = count;
         row.insertCell(1).innerHTML = student;
         row.insertCell(2).innerHTML = course;
-        row.insertCell(3).innerHTML = date;
-        row.insertCell(4).innerHTML = time;
-        row.insertCell(5).innerHTML = "<span class='pending'>Pending</span>";
+        row.insertCell(3).innerHTML = finalDate;
+        row.insertCell(4).innerHTML = finalTime;
+        row.insertCell(5).innerHTML = notes == "" ? "-" : notes;
+        row.insertCell(6).innerHTML = "<span class='pending'>Pending</span>";
 
-        row.insertCell(6).innerHTML =
-        "<button type='button' onclick='approveBooking(this)'>Approve</button> " +
-        "<button type='button' onclick='rejectBooking(this)'>Reject</button> " +
-        "<button type='button' onclick='completeBooking(this)'>Completed</button> " +
-        "<button type='button' onclick='cancelBooking(this)'>Cancel</button>";
+        row.insertCell(7).innerHTML =
+        "<button type='button'>Approve</button> " +
+        "<button type='button'>Reject</button> " +
+        "<button type='button'>Completed</button> " +
+        "<button type='button'>Cancel</button>";
+
+        // Add button functions to new row
+
+        addButtonFunctions(row);
 
         message.innerHTML = "Your class has been booked successfully!";
         message.style.color = "green";
 
+        // Clear form
+
+        document.getElementById("bookStudent").value = "";
         document.getElementById("bookCourse").value = "";
         document.getElementById("bookDate").value = "";
         document.getElementById("bookTime").value = "";
@@ -50,15 +100,61 @@ document.getElementById("bookBtn").onclick = function()
 };
 
 
+// Function to change booking status
+
+function changeStatus(button, newStatus, className)
+{
+    var row = button.parentElement.parentElement;
+
+    var oldStatus = row.cells[6].innerText;
+
+    if(newStatus == "Approved")
+    {
+        if(oldStatus != "Pending")
+        {
+            alert("Only pending bookings can be approved!");
+            return;
+        }
+    }
+
+    else if(newStatus == "Rejected")
+    {
+        if(oldStatus != "Pending")
+        {
+            alert("Only pending bookings can be rejected!");
+            return;
+        }
+    }
+
+    else if(newStatus == "Completed")
+    {
+        if(oldStatus != "Approved")
+        {
+            alert("Only approved bookings can be completed!");
+            return;
+        }
+    }
+
+    else if(newStatus == "Cancelled")
+    {
+        if(oldStatus != "Pending" && oldStatus != "Approved")
+        {
+            alert("This booking cannot be cancelled!");
+            return;
+        }
+    }
+
+    row.cells[6].innerHTML = "<span class='" + className + "'>" + newStatus + "</span>";
+
+    alert("Booking status changed to " + newStatus + "!");
+}
+
+
 // Function to approve booking
 
 function approveBooking(button)
 {
-    var row = button.parentElement.parentElement;
-
-    row.cells[5].innerHTML = "<span class='approved'>Approved</span>";
-
-    alert("Booking Approved!");
+    changeStatus(button, "Approved", "approved");
 }
 
 
@@ -66,11 +162,7 @@ function approveBooking(button)
 
 function rejectBooking(button)
 {
-    var row = button.parentElement.parentElement;
-
-    row.cells[5].innerHTML = "<span class='rejected'>Rejected</span>";
-
-    alert("Booking Rejected!");
+    changeStatus(button, "Rejected", "rejected");
 }
 
 
@@ -78,11 +170,7 @@ function rejectBooking(button)
 
 function completeBooking(button)
 {
-    var row = button.parentElement.parentElement;
-
-    row.cells[5].innerHTML = "<span class='completed'>Completed</span>";
-
-    alert("Class Completed!");
+    changeStatus(button, "Completed", "completed");
 }
 
 
@@ -90,50 +178,15 @@ function completeBooking(button)
 
 function cancelBooking(button)
 {
-    var row = button.parentElement.parentElement;
-
-    row.cells[5].innerHTML = "<span class='cancelled'>Cancelled</span>";
-
-    alert("Booking Cancelled!");
+    changeStatus(button, "Cancelled", "cancelled");
 }
 
 
-// Function to search and filter bookings
+// Function to add actions to table buttons
 
-document.getElementById("filterBtn").onclick = function()
+function addButtonFunctions(row)
 {
-    var search = document.getElementById("bookSearch").value.toLowerCase();
-
-    var status = document.getElementById("statusFilter").value.toLowerCase();
-
-    var table = document.getElementById("bookingBody");
-
-    for(var i = 0; i < table.rows.length; i++)
-    {
-        var course = table.rows[i].cells[2].innerHTML.toLowerCase();
-
-        var bookingStatus = table.rows[i].cells[5].innerText.toLowerCase();
-
-        if(course.includes(search) && (status == "all" || bookingStatus == status))
-        {
-            table.rows[i].style.display = "";
-        }
-
-        else
-        {
-            table.rows[i].style.display = "none";
-        }
-    }
-};
-
-
-// Add functions to existing buttons
-
-var table = document.getElementById("bookingBody");
-
-for(var i = 0; i < table.rows.length; i++)
-{
-    var buttons = table.rows[i].getElementsByTagName("button");
+    var buttons = row.getElementsByTagName("button");
 
     buttons[0].onclick = function()
     {
@@ -155,3 +208,60 @@ for(var i = 0; i < table.rows.length; i++)
         cancelBooking(this);
     };
 }
+
+
+// Add functions to existing booking buttons
+
+var table = document.getElementById("bookingBody");
+
+for(var i = 0; i < table.rows.length; i++)
+{
+    addButtonFunctions(table.rows[i]);
+}
+
+
+// Function to search and filter bookings
+
+document.getElementById("filterBtn").onclick = function()
+{
+    var search = document.getElementById("bookSearch").value.toLowerCase();
+
+    var status = document.getElementById("statusFilter").value;
+
+    var table = document.getElementById("bookingBody");
+
+    for(var i = 0; i < table.rows.length; i++)
+    {
+        var course = table.rows[i].cells[2].innerText.toLowerCase();
+
+        var bookingStatus = table.rows[i].cells[6].innerText;
+
+        if(course.indexOf(search) != -1 &&
+           (status == "all" || bookingStatus == status))
+        {
+            table.rows[i].style.display = "";
+        }
+
+        else
+        {
+            table.rows[i].style.display = "none";
+        }
+    }
+};
+
+
+// Function to reset search and filters
+
+document.getElementById("resetBtn").onclick = function()
+{
+    document.getElementById("bookSearch").value = "";
+
+    document.getElementById("statusFilter").value = "all";
+
+    var table = document.getElementById("bookingBody");
+
+    for(var i = 0; i < table.rows.length; i++)
+    {
+        table.rows[i].style.display = "";
+    }
+};
