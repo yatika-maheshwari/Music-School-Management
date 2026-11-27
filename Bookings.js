@@ -1,5 +1,5 @@
 
-// Set minimum date to today
+// Set today's date as the minimum booking date
 
 var today = new Date();
 
@@ -22,7 +22,7 @@ var todayDate = year + "-" + month + "-" + day;
 document.getElementById("bookDate").min = todayDate;
 
 
-// Function to book a new class
+// Function to book a class
 
 document.getElementById("bookBtn").onclick = function()
 {
@@ -54,19 +54,13 @@ document.getElementById("bookBtn").onclick = function()
 
         var count = table.rows.length;
 
-        // Change date format
-
         var newDate = date.split("-");
 
         var finalDate = newDate[2] + "-" + newDate[1] + "-" + newDate[0];
 
-        // Get selected time text
-
         var timeList = document.getElementById("bookTime");
 
         var finalTime = timeList.options[timeList.selectedIndex].text;
-
-        // Add booking details to table
 
         row.insertCell(0).innerHTML = count;
         row.insertCell(1).innerHTML = student;
@@ -82,14 +76,12 @@ document.getElementById("bookBtn").onclick = function()
         "<button type='button'>Completed</button> " +
         "<button type='button'>Cancel</button>";
 
-        // Add button functions to new row
-
         addButtonFunctions(row);
 
         message.innerHTML = "Your class has been booked successfully!";
         message.style.color = "green";
 
-        // Clear form
+        // Clear the booking form
 
         document.getElementById("bookStudent").value = "";
         document.getElementById("bookCourse").value = "";
@@ -108,25 +100,16 @@ function changeStatus(button, newStatus, className)
 
     var oldStatus = row.cells[6].innerText;
 
-    if(newStatus == "Approved")
+    if(newStatus == "Approved" || newStatus == "Rejected")
     {
         if(oldStatus != "Pending")
         {
-            alert("Only pending bookings can be approved!");
+            alert("Only pending bookings can be changed!");
             return;
         }
     }
 
-    else if(newStatus == "Rejected")
-    {
-        if(oldStatus != "Pending")
-        {
-            alert("Only pending bookings can be rejected!");
-            return;
-        }
-    }
-
-    else if(newStatus == "Completed")
+    if(newStatus == "Completed")
     {
         if(oldStatus != "Approved")
         {
@@ -135,7 +118,7 @@ function changeStatus(button, newStatus, className)
         }
     }
 
-    else if(newStatus == "Cancelled")
+    if(newStatus == "Cancelled")
     {
         if(oldStatus != "Pending" && oldStatus != "Approved")
         {
@@ -144,13 +127,14 @@ function changeStatus(button, newStatus, className)
         }
     }
 
-    row.cells[6].innerHTML = "<span class='" + className + "'>" + newStatus + "</span>";
+    row.cells[6].innerHTML =
+    "<span class='" + className + "'>" + newStatus + "</span>";
 
-    alert("Booking status changed to " + newStatus + "!");
+    alert("Booking status changed to " + newStatus);
 }
 
 
-// Function to approve booking
+// Approve booking
 
 function approveBooking(button)
 {
@@ -158,7 +142,7 @@ function approveBooking(button)
 }
 
 
-// Function to reject booking
+// Reject booking
 
 function rejectBooking(button)
 {
@@ -166,7 +150,7 @@ function rejectBooking(button)
 }
 
 
-// Function to complete booking
+// Complete booking
 
 function completeBooking(button)
 {
@@ -174,7 +158,7 @@ function completeBooking(button)
 }
 
 
-// Function to cancel booking
+// Cancel booking
 
 function cancelBooking(button)
 {
@@ -182,7 +166,7 @@ function cancelBooking(button)
 }
 
 
-// Function to add actions to table buttons
+// Function to add button actions
 
 function addButtonFunctions(row)
 {
@@ -210,7 +194,7 @@ function addButtonFunctions(row)
 }
 
 
-// Add functions to existing booking buttons
+// Add actions to existing table buttons
 
 var table = document.getElementById("bookingBody");
 
@@ -220,7 +204,7 @@ for(var i = 0; i < table.rows.length; i++)
 }
 
 
-// Function to search and filter bookings
+// Function to search bookings
 
 document.getElementById("filterBtn").onclick = function()
 {
@@ -241,7 +225,6 @@ document.getElementById("filterBtn").onclick = function()
         {
             table.rows[i].style.display = "";
         }
-
         else
         {
             table.rows[i].style.display = "none";
@@ -250,7 +233,7 @@ document.getElementById("filterBtn").onclick = function()
 };
 
 
-// Function to reset search and filters
+// Function to reset search
 
 document.getElementById("resetBtn").onclick = function()
 {
