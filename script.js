@@ -99,9 +99,8 @@ if (searchForm) {
 // ===== REGISTER PAGE =====
 if (registerForm) {
     registerForm.addEventListener("submit", (event) => {
-        event.preventDefault(); // stop page refresh
+        event.preventDefault(); // Stop default GET form submission
 
-        // Read the values
         const name = registerForm.elements["name"].value.trim();
         const email = registerForm.elements["email"].value.trim().toLowerCase();
         const password = registerForm.elements["password"].value;
@@ -120,6 +119,9 @@ if (registerForm) {
         }
         if (password !== confirmPassword) {
             return showMessage("Passwords do not match.", "red");
+        }
+        if (!role) {
+            return showMessage("Please select a role.", "red");
         }
 
         // Get saved users (empty array the first time)
@@ -143,10 +145,15 @@ if (registerForm) {
 // ===== LOGIN PAGE =====
 if (loginForm) {
     // Demo admin account (admins cannot register)
-    const admin = { name: "Admin", email: "admin@serenova.com", password: "Admin@123", role: "admin" };
+    const admin = {
+        name: "Admin",
+        email: "admin@serenova.com",
+        password: "Admin@123",
+        role: "admin",
+    };
 
     loginForm.addEventListener("submit", (event) => {
-        event.preventDefault(); // stop page refresh
+        event.preventDefault(); // Stop page refresh
 
         const email = loginForm.elements["email"].value.trim().toLowerCase();
         const password = loginForm.elements["password"].value;
@@ -156,7 +163,9 @@ if (loginForm) {
         const users = [admin, ...(JSON.parse(localStorage.getItem("users")) || [])];
 
         // find() returns the matching user, or undefined
-        const user = users.find((u) => u.email === email && u.password === password && u.role === role);
+        const user = users.find(
+            (u) => u.email === email && u.password === password && u.role === role
+        );
 
         if (!user) {
             return showMessage("Wrong email, password or role.", "red");
@@ -165,15 +174,19 @@ if (loginForm) {
         // Remember me: localStorage stays, sessionStorage ends with the tab
         localStorage.removeItem("currentUser");
         sessionStorage.removeItem("currentUser");
-        const storage = loginForm.elements["remember"].checked ? localStorage : sessionStorage;
-        storage.setItem("currentUser", JSON.stringify({ name: user.name, email: user.email, role: user.role }));
+
+        const storage = loginForm.elements["remember"]?.checked ? localStorage : sessionStorage;
+        storage.setItem(
+            "currentUser",
+            JSON.stringify({ name: user.name, email: user.email, role: user.role })
+        );
 
         showMessage("Login successful!", "green");
         setTimeout(() => (location.href = "index.html"), 1000);
     });
 
     // Google / Apple buttons and "Forgot password?" are not real yet
-    document.querySelectorAll('.social button, .remember a').forEach((item) => {
+    document.querySelectorAll(".social button, .remember a").forEach((item) => {
         item.addEventListener("click", (event) => {
             event.preventDefault();
             showMessage("This feature is not available in this demo.", "#4b2e83");
