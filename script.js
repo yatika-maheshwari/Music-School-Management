@@ -13,6 +13,10 @@ const searchForm = document.querySelector("#searchForm");
 // Show a message below a form
 function showMessage(text, color) {
     const message = document.querySelector("#message");
+    if (!message) {
+        console.warn("No #message element on this page:", text);
+        return;
+    }
     message.textContent = text;
     message.style.color = color;
 }
